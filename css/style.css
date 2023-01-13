@@ -1,0 +1,19 @@
+@import url(//fonts.googleapis.com/css?family=VT323);
+* {
+  font-family: "VT323";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  letter-spacing: 0.2rem;
+  margin: 0;
+  overflow: hidden;
+  perspective: 1400px;
+  text-transform: uppercase;
+}
+.full-screen {
+  transition: transform 0.9s cubic-bezier(0.55, 0, 0.1, 1);
+}
