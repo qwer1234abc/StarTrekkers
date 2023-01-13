@@ -17,3 +17,30 @@ body {
 .full-screen {
   transition: transform 0.9s cubic-bezier(0.55, 0, 0.1, 1);
 }
+.screen-wrap {
+  height: 100vh;
+  width: 100vw;
+}
+@keyframes crt-output {
+  0% {
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+h2 {
+  /*font-size: 16vmin;*/
+  margin: 0;
+  font-weight: 200;
+  color: rgba(129, 243, 253, 1);
+  text-shadow: 0rem 0.1rem 1rem rgba(129, 243, 253, 0.75);
+  font-size: 4em;
+  animation: crt-output 0.5ms infinite;
+}
+.underscore {
+  position: relative;
+  right: 22px;
+  display: inline-block;
+  animation: crt-blink 1s infinite;
+}
