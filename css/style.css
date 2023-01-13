@@ -44,3 +44,87 @@ h2 {
   display: inline-block;
   animation: crt-blink 1s infinite;
 }
+h2::selection {
+  color: #fff;
+  background: rgba(129, 243, 253, 1);
+}
+h2::-moz-selection {
+  color: #fff;
+  background: rgba(129, 243, 253, 1);
+}
+h2 span::selection {
+  color: #fff;
+  background: rgba(129, 243, 253, 1);
+}
+h2 span::-moz-selection {
+  color: #fff;
+  background: rgba(129, 243, 253, 1);
+}
+.screen-wrap {
+  perspective: 2000px;
+  transition: transform 0.9s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.screen {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 2;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 5px solid rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+  will-change: transform;
+}
+.screen:before {
+  background-color: transparent;
+  bottom: 0;
+  content: "";
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: background-color 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: 2;
+}
+.screen h2 {
+  cursor: default;
+  left: 50%;
+  line-height: 1;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  user-select: none;
+}
+.screen[data-x-pos="-1"][data-y-pos="1"] {
+  z-index: 2;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.4);
+}
+.screen[data-x-pos="-1"] {
+  left: -100%;
+}
+.screen[data-x-pos="-1"][data-y-pos="0"] {
+  z-index: 2;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.4);
+}
+.screen[data-x-pos="-1"] {
+  left: -100%;
+}
+.screen[data-x-pos="-1"][data-y-pos="-1"] {
+  z-index: 2;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.4);
+}
+.screen[data-y-pos="1"] {
+  top: -100%;
+}
