@@ -13,6 +13,8 @@ body {
   overflow: hidden;
   perspective: 1400px;
   text-transform: uppercase;
+  background: radial-gradient(ellipse at bottom, #162230 0%, #07080c 100%);
+
 }
 .full-screen {
   transition: transform 0.9s cubic-bezier(0.55, 0, 0.1, 1);
