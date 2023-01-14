@@ -14,7 +14,6 @@ body {
   perspective: 1400px;
   text-transform: uppercase;
   background: radial-gradient(ellipse at bottom, #162230 0%, #07080c 100%);
-
 }
 .full-screen {
   transition: transform 0.9s cubic-bezier(0.55, 0, 0.1, 1);
@@ -108,11 +107,9 @@ ul {
   left: 50%;
   transform: translate(-50%, 100%);
 }
-
 ul li {
   list-style: none;
 }
-
 ul li a {
   width: 60px;
   height: 60px;
@@ -129,7 +126,6 @@ ul li a {
   text-shadow: 0rem 0.1rem 1rem rgba(129, 243, 253, 0.75);
   z-index: 1;
 }
-
 #youtube {
   position: relative;
   color: #ff0000;
@@ -174,7 +170,6 @@ ul li a:hover .icon {
   color: #fff;
   transform: rotateY(360deg);
 }
-
 ul li a:before {
   content: "";
   position: absolute;
@@ -186,23 +181,18 @@ ul li a:before {
   transition: 0.5s;
   z-index: 2;
 }
-
 ul li a:hover:before {
   top: 0;
 }
-
 ul li:nth-child(1) a:before {
   background: #fff;
 }
-
 ul li:nth-child(2) a:before {
   background: #fff;
 }
-
 ul li:nth-child(3) a:before {
   background: #fff;
 }
-
 ul li:nth-child(4) a:before {
   background: #fff;
 }
@@ -210,7 +200,6 @@ ul li:nth-child(4) a:before {
   left: -100%;
 }
 /* End of socials */
-
 .screen[data-x-pos="-1"][data-y-pos="1"] {
   z-index: 2;
   backdrop-filter: blur(5px);
