@@ -484,6 +484,38 @@
     240px 954px #fff, 817px 1331px #fff, 71px 1453px #fff, 323px 1699px #fff,
     816px 810px #fff;
 }
+#dots3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 1074px 1819px #fff, 431px 110px #fff, 900px 271px #fff,
+    498px 1959px #fff, 601px 548px #fff, 625px 484px #fff, 672px 253px #fff,
+    800px 1802px #fff, 108px 1232px #fff, 16px 1153px #fff, 1536px 1108px #fff,
+    79px 1013px #fff, 107px 1965px #fff, 1108px 1772px #fff, 1502px 1435px #fff,
+    1222px 1777px #fff, 225px 277px #fff, 1292px 143px #fff, 1691px 1070px #fff,
+    1121px 1905px #fff, 1290px 960px #fff, 1901px 261px #fff, 1495px 1677px #fff,
+    162px 1129px #fff, 985px 62px #fff, 1282px 860px #fff, 1356px 1285px #fff,
+    1904px 1597px #fff, 538px 476px #fff, 266px 887px #fff, 1614px 1197px #fff,
+    447px 1027px #fff, 388px 1950px #fff, 1513px 1150px #fff, 1770px 33px #fff,
+    961px 234px #fff, 354px 1024px #fff, 671px 1288px #fff, 1535px 359px #fff,
+    2000px 697px #fff, 1053px 966px #fff, 1398px 485px #fff, 1159px 1319px #fff,
+    649px 1935px #fff, 656px 780px #fff, 245px 376px #fff, 229px 752px #fff,
+    325px 221px #fff, 259px 927px #fff, 803px 1706px #fff, 1614px 1646px #fff,
+    865px 1483px #fff, 1562px 1679px #fff, 959px 1367px #fff, 381px 1253px #fff,
+    1238px 440px #fff, 636px 1183px #fff, 1225px 1551px #fff, 693px 30px #fff,
+    1419px 1068px #fff, 229px 355px #fff, 1200px 608px #fff, 1917px 1803px #fff,
+    366px 1319px #fff, 1850px 786px #fff, 399px 1438px #fff, 395px 1027px #fff,
+    1751px 1717px #fff, 1543px 870px #fff, 6px 510px #fff, 1517px 1046px #fff,
+    1496px 27px #fff, 433px 1196px #fff, 931px 625px #fff, 1421px 249px #fff,
+    1281px 970px #fff, 1606px 1087px #fff, 893px 1601px #fff, 1524px 1898px #fff,
+    1725px 915px #fff, 1226px 1524px #fff, 819px 528px #fff, 1780px 508px #fff,
+    1967px 886px #fff, 957px 672px #fff, 1813px 1482px #fff, 962px 1191px #fff,
+    569px 618px #fff, 478px 1563px #fff, 371px 1061px #fff, 771px 1841px #fff,
+    925px 282px #fff, 89px 328px #fff, 514px 731px #fff, 1352px 1373px #fff,
+    1484px 1203px #fff, 949px 399px #fff, 1304px 17px #fff, 1839px 589px #fff,
+    149px 691px #fff;
+  animation: animStar 150s linear infinite;
+}
 @keyframes animStar {
   from {
     transform: translateY(0px);
