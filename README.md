@@ -69,6 +69,10 @@ For the features of the website it is ease to make users to understand and navig
 
 - The project uses fontawesome for icons display in the web.
 
+7. [Flaticon](https://www.flaticon.com/)
+
+- The project uses flaticon for web's icon.
+
 ## Testing
 
 ## Credits
