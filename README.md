@@ -84,6 +84,6 @@ For the features of the website it is ease to make users to understand and navig
 ### Media
 
 - The video used in this project were obtained from [-](...).
-- The picture used in this project were obtained form [-](...).
+- The picture used in this project were obtained from [-](...).
 
 ### Acknowledgements
