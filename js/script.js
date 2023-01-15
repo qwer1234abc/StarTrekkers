@@ -110,3 +110,24 @@ function zoomIn() {
   }
   removeClass(site, "show-all");
 }
+
+$(document).ready(function () {
+  $(document).keydown(function (e) {
+    if (e.keyCode == 9) {
+      //tab pressed
+      e.preventDefault(); // stops its action
+    }
+  });
+  // press esc to show all
+  $(document).on("keydown", function (event) {
+    if (event.key == "Escape") {
+      addClass(site, "show-all");
+      for (let x = 0; x < screen.length; x++) {
+        (function (_x) {
+          screen[_x].addEventListener("click", setScreenAndZoom);
+        })(x);
+      }
+      oriPos();
+    }
+  });
+});
