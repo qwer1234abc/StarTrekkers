@@ -9,7 +9,6 @@ body {
   min-height: 100vh;
   background-repeat: no-repeat;
   letter-spacing: 0.2rem;
-  margin: 0;
   overflow: hidden;
   perspective: 1400px;
   text-transform: uppercase;
@@ -18,9 +17,26 @@ body {
 .full-screen {
   transition: transform 0.9s cubic-bezier(0.55, 0, 0.1, 1);
 }
+.full-screen.show-all {
+  transform: rotateY(-15deg) scale(0.25);
+}
 .screen-wrap {
   height: 100vh;
   width: 100vw;
+}
+@keyframes crt-blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  50.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes crt-output {
   0% {
@@ -38,6 +54,9 @@ h2 {
   text-shadow: 0rem 0.1rem 1rem rgba(129, 243, 253, 0.75);
   font-size: 4em;
   animation: crt-output 0.5ms infinite;
+}
+span {
+  color: #fff;
 }
 .underscore {
   position: relative;
@@ -65,6 +84,9 @@ h2 span::-moz-selection {
   perspective: 2000px;
   transition: transform 0.9s cubic-bezier(0.55, 0, 0.1, 1);
 }
+.screen-wrap.animate-scale {
+  transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+}
 .screen {
   width: 100vw;
   height: 100vh;
@@ -88,6 +110,16 @@ h2 span::-moz-selection {
   top: 0;
   transition: background-color 0.3s cubic-bezier(0.55, 0, 0.1, 1);
   z-index: 2;
+}
+.screen:before .show-all {
+  pointer-events: all;
+}
+.screen:hover .show-all:before {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+.screen .animate-scale {
+  transform: scale(0.8);
 }
 .screen h2 {
   cursor: default;
@@ -290,6 +322,9 @@ ul li:nth-child(4) a:before {
 }
 .screen_zoom:hover {
   opacity: 1;
+}
+.screen_zoom .show-all {
+  pointer-events: none;
 }
 .screen_nav {
   cursor: pointer;
