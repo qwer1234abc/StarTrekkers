@@ -9,3 +9,19 @@ let site = document.querySelectorAll(".full-screen")[0],
   animation = document.querySelectorAll(".js-animation"),
   pos_x = 0,
   pos_y = 0;
+function hasClass(cls, attr) {
+  return cls.className.match(new RegExp("(\\s|^)" + attr + "(\\s|$)"));
+}
+
+function addClass(cls, attr) {
+  if (!this.hasClass(cls, attr)) {
+    cls.className += "  " + attr;
+  }
+}
+
+function removeClass(cls, attr) {
+  if (this.hasClass(cls, attr)) {
+    let reg = new RegExp("(\\s|^)" + attr + "(\\s|$)");
+    cls.className = cls.className.replace(reg, " ");
+  }
+}
