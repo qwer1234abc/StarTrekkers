@@ -21,7 +21,7 @@ Then, we start creating a wireframe for our webpage that showcases the layout of
 
 ##### **Here is the wireframe for our project:**
 
-[Link for wireframe](...)
+[Link for wireframe]()
 
 ## Features
 
