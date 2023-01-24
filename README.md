@@ -78,7 +78,9 @@ For the features of the website it is ease to make users to understand and navig
 **1. Mode :**
 
 i. Click on the 'Mode' panel located at the bottom left side.
+
 ii. A toggle button located in the center of the page that allow users to swtich between day/night mode depends on their peferences.
+
 iii. Try to switch and play with the toggle button to see the differences between day/night mode.
 
 The project looks very much the same on both laptop browsers and on mobile screen, in fact it may be a little smaller on mobile view.
