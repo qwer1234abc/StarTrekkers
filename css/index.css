@@ -376,6 +376,11 @@ ul li:nth-child(4) a:before {
   left: 50%;
   transform: translateX(-50%);
 }
+.screen[data-x-pos="0"][data-y-pos="0"] .screen_nav.screen_nav-right.js-right
+{
+  right: 1rem;
+  top: 44%;
+} 
 .screen_nav:hover {
   opacity: 1;
 }
