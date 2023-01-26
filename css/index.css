@@ -424,7 +424,7 @@ span.zoom:before {
   left: -50%;
   transform: translateX(-50%) translateY(-50%);
 }
-/* toggle button for day/night mood start  */
+/* toggle button for day/night mode start  */
 #toggle_checkbox {
   display: none;
 }
@@ -483,4 +483,4 @@ label:after {
   height: 54px;
   border-color: red;
 }
-/* toggle button for day/night mood end */
+/* toggle button for day/night mode end */

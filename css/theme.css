@@ -1,0 +1,78 @@
+/* Light mode background color */
+.light-theme {
+  background-image: linear-gradient(
+    to bottom right,
+    #e6f3fe,
+    #e2f6ff,
+    #d8fdfe,
+    #ebf6eb,
+    #f2f8eb
+  );
+}
+/* Light mode panel screen color */
+.light-theme .screen {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 2;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.4);
+  transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+  will-change: transform;
+}
+.light-theme .screen[data-x-pos="-1"][data-y-pos="1"],
+.light-theme .screen[data-x-pos="-1"][data-y-pos="0"],
+.light-theme .screen[data-x-pos="-1"][data-y-pos="-1"],
+.light-theme .screen[data-y-pos="1"][data-x-pos="0"],
+.light-theme .screen[data-y-pos="-1"][data-x-pos="0"],
+.light-theme .screen[data-x-pos="1"][data-y-pos="1"],
+.light-theme .screen[data-x-pos="1"][data-y-pos="0"],
+.light-theme .screen[data-x-pos="1"][data-y-pos="-1"] {
+  z-index: 2;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.4);
+}
+/* Light mode screen nav color */
+.light-theme .screen_nav {
+  color: rgb(0, 0, 0);
+}
+/* Light mode h2 font color */
+.light-theme h2 {
+  margin: 0;
+  font-weight: 200;
+  color: #000000;
+  text-shadow: 0rem 0.1rem 1rem #575658;
+  font-size: 4em;
+  animation: crt-output 0.5ms infinite;
+}
+/* Light mode game page animation  */
+.light-theme div.loader {
+  color: #000000;
+}
+/* Light mode link color */
+.light-theme a {
+  color: #000000;
+}
+/* Light mode social icon border color  */
+.light-theme ul li a {
+  border: 3px solid #000;
+}
+/* Light mode social hover background color  */
+.light-theme ul li:nth-child(1) a:before,
+.light-theme ul li:nth-child(2) a:before,
+.light-theme ul li:nth-child(3) a:before,
+.light-theme ul li:nth-child(4) a:before {
+  background: rgb(38, 38, 38);
+}
+/* Light mode label and toggle check box color  */
+.light-theme label:after,
+.light-theme #toggle_checkbox:checked + label:before {
+  border: 3px solid #000;
+}
+.light-theme span.zoom:before {
+  color: #000;
+}
