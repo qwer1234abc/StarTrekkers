@@ -1,4 +1,4 @@
-#dots1 {
+.light-theme #dots1 {
   width: 1px;
   height: 1px;
   background: transparent;
@@ -181,7 +181,7 @@
     1747px 1521px #000, 1312px 1842px #000, 962px 764px #000, 1337px 446px #000;
   animation: animStar 50s linear infinite;
 }
-#dots1:after {
+.light-theme #dots1:after {
   content: " ";
   position: absolute;
   top: 2000px;
@@ -366,7 +366,7 @@
     1533px 1692px #000, 1015px 578px #000, 1703px 1537px #000,
     1747px 1521px #000, 1312px 1842px #000, 962px 764px #000, 1337px 446px #000;
 }
-#dots2 {
+.light-theme #dots2 {
   width: 2px;
   height: 2px;
   background: transparent;
@@ -424,7 +424,7 @@
     816px 810px #000;
   animation: animStar 100s linear infinite;
 }
-#dots2:after {
+.light-theme #dots2:after {
   content: " ";
   position: absolute;
   top: 2000px;
@@ -484,7 +484,7 @@
     240px 954px #000, 817px 1331px #000, 71px 1453px #000, 323px 1699px #000,
     816px 810px #000;
 }
-#dots3 {
+.light-theme #dots3 {
   width: 3px;
   height: 3px;
   background: transparent;
@@ -516,7 +516,7 @@
     149px 691px #000;
   animation: animStar 150s linear infinite;
 }
-#dots3:after {
+.light-theme #dots3:after {
   content: " ";
   position: absolute;
   top: 2000px;
