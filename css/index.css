@@ -21,6 +21,7 @@ body {
 #game_enter {
   text-decoration: none;
   color: rgba(129, 243, 253, 1);
+  font-size: 28px;
 }
 .full-screen {
   transition: transform 0.9s cubic-bezier(0.55, 0, 0.1, 1);
@@ -62,9 +63,6 @@ h2 {
   text-shadow: 0rem 0.1rem 1rem rgba(129, 243, 253, 0.75);
   font-size: 4em;
   animation: crt-output 0.5ms infinite;
-}
-#game_enter {
-  font-size: 28px;
 }
 span {
   color: #fff;
