@@ -76,3 +76,7 @@
 .light-theme span.zoom:before {
   color: #000;
 }
+.light-theme span.active:after,
+span:hover:after {
+  border-color: #000;
+}
