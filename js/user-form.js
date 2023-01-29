@@ -15,24 +15,15 @@ let SignupForm = document.querySelector(".signup-box");
 let LoginExitIcon = document.querySelector(".exit-icon");
 let SignupExitIcon = document.querySelector(".exit-icon-signup");
 
-<<<<<<< HEAD
 let menu = document.querySelector(".screen_zoom")
-
-=======
-let menu = document.querySelector(".screen_zoom");
->>>>>>> 85c4b8445a4f4d2fb788bb9bd245c07e5c693141
 // add a click event listener to the login & sign up button
 loginBtn.addEventListener("click", () => {
   // only display the login form
   loginForm.style.display = "block";
-  menu.style.display = "none";
-  const scriptElement = document.querySelector('script[src="js/index.js"]');
-  scriptElement.parentNode.removeChild(scriptElement);
 });
 SignupBtn.addEventListener("click", () => {
   // only display the signup form
   SignupForm.style.display = "block";
-  menu.style.display = "none";
 });
 // add a click event listener to the exit icon for both login and sign up
 LoginExitIcon.addEventListener("click", () => {

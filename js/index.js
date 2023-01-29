@@ -9,6 +9,7 @@ let site = document.querySelectorAll(".full-screen")[0],
   animation = document.querySelectorAll(".js-animation"),
   pos_x = 0,
   pos_y = 0;
+
 function hasClass(cls, attr) {
   return cls.className.match(new RegExp("(\\s|^)" + attr + "(\\s|$)"));
 }
@@ -31,6 +32,8 @@ function setPos() {
     "translateX(" + pos_x + "00%) translateY(" + pos_y + "00%)";
   setTimeout(function () {
     removeClass(wrap, "animate");
+    SignupForm.style.display = "none";
+    loginForm.style.display = "none";
   }, 600);
 }
 function oriPos() {
@@ -94,6 +97,8 @@ function zoomOut(e) {
       screen[_x].addEventListener("click", setScreenAndZoom);
     })(x);
   }
+  SignupForm.style.display = "none";
+  loginForm.style.display = "none";
   oriPos();
 }
 
@@ -127,6 +132,8 @@ $(document).ready(function () {
           screen[_x].addEventListener("click", setScreenAndZoom);
         })(x);
       }
+      SignupForm.style.display = "none";
+      loginForm.style.display = "none";
       oriPos();
     }
   });

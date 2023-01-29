@@ -12,11 +12,10 @@ $(document).ready(function () {
     e.preventDefault();
     let player_username = $("#player-username").val();
     let player_password = $("#player-password").val();
-    let form = $("#add-player-form");
+    let form = $("#player-signup-form");
     let inputs = form.find("input");
     let isValid = true;
     let player_confirm_password = $("#player-confirm-password").val();
-
     isValid = validatePassword(player_password, player_confirm_password);
     for (var i = 0; i < inputs.length; i++) {
       if (!inputs[i].value) {
@@ -47,13 +46,14 @@ $(document).ready(function () {
         data: JSON.stringify(jsondata),
         beforeSend: function () {
           $("#player-submit").prop("disabled", true);
-          $("#add-player-form").trigger("reset");
         },
       };
       $.ajax(settings).done(function (response) {
         console.log(response);
         $("#player-submit").prop("disabled", false);
         alert("Player record successfully added");
+        $("#player-signup-form").trigger("reset");
+
       });
     }
   });
