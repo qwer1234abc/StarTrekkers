@@ -103,7 +103,6 @@ h2 span::-moz-selection {
   z-index: 2;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 5px solid rgba(0, 0, 0, 0.2);
   background: rgba(0, 0, 0, 0.4);
   transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
   will-change: transform;
@@ -382,6 +381,9 @@ ul li:nth-child(4) a:before {
   transform: translateX(-50%);
 }
 .screen[data-x-pos="0"][data-y-pos="0"] .screen_nav.screen_nav-right.js-right {
+  right: 1rem;
+}
+.screen[data-x-pos="0"][data-y-pos="0"] #leaderboard {
   right: 1rem;
   top: 44%;
 }
