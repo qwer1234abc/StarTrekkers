@@ -310,6 +310,7 @@ ul li:nth-child(4) a:before {
   transition: opacity 0.3s cubic-bezier(0.55, 0, 0.1, 1);
   user-select: none;
   z-index: 10;
+  transition: ease 0.5s;
 }
 .screen_zoom:hover {
   opacity: 1;
