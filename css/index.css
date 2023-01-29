@@ -489,3 +489,20 @@ label:after {
   border-color: red;
 }
 /* toggle button for day/night mode end */
+/* login & signup start*/
+.user {
+  position: absolute;
+  font-size: 25px;
+  top: 78%;
+  right: 0;
+  left: 0;
+  text-align: center;
+}
+.login-icon,
+.signup-icon,
+element {
+  color: #fff;
+  opacity: 0.65;
+}
+
+/* login & signup end*/
