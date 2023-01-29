@@ -434,7 +434,7 @@ span.zoom:before {
   display: none;
 }
 
-label {
+#checkbox {
   position: absolute;
   top: 61%;
   right: 0;
@@ -447,7 +447,7 @@ label {
   cursor: pointer;
 }
 
-label:before {
+#checkbox:before {
   top: 8px;
   left: 8px;
   width: 54px;
@@ -455,7 +455,7 @@ label:before {
   border: 3px solid red;
 }
 
-label:after {
+#checkbox:after {
   top: 0;
   right: 0;
   width: 140px;
@@ -463,8 +463,8 @@ label:after {
   border: 3px solid rgba(129, 243, 253, 1);
 }
 
-label:before,
-label:after {
+#checkbox:before,
+#checkbox:after {
   content: "";
   position: absolute;
   border-radius: 50px;
@@ -473,7 +473,7 @@ label:after {
     0.5s ease height, 0.5s ease border-color;
 }
 
-#toggle_checkbox:checked + label:before {
+#toggle_checkbox:checked + #checkbox:before {
   top: 0;
   left: 0;
   width: 140px;
@@ -481,7 +481,7 @@ label:after {
   border-color: rgba(129, 243, 253, 1);
 }
 
-#toggle_checkbox:checked + label:after {
+#toggle_checkbox:checked + #checkbox:after {
   top: 8px;
   right: 8px;
   width: 54px;
@@ -511,6 +511,7 @@ element {
   right: 1.5rem;
   cursor: pointer;
   opacity: 0.5;
+  color: #fff;
 }
 .exit-icon:hover {
   opacity: 1;
@@ -689,6 +690,17 @@ input {
 }
 /* login box */
 /* signup box */
+.exit-icon-signup {
+  position: absolute;
+  right: 1.5rem;
+  cursor: pointer;
+  opacity: 0.5;
+  color: #fff;
+  z-index: 5;
+}
+.exit-icon-signup:hover {
+  opacity: 1;
+}
 .signup-box {
   position: absolute;
   top: 50%;
