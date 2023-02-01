@@ -1,3 +1,7 @@
+/* Light mode for all span  */
+.light-theme span {
+  color: #000;
+}
 /* Light mode background color */
 .light-theme {
   background-image: linear-gradient(
@@ -15,8 +19,6 @@
   height: 100vh;
   position: absolute;
   z-index: 2;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
   border: rgba(255, 255, 255, 0.2);
   background: rgba(255, 255, 255, 0.4);
   transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
@@ -31,8 +33,6 @@
 .light-theme .screen[data-x-pos="1"][data-y-pos="0"],
 .light-theme .screen[data-x-pos="1"][data-y-pos="-1"] {
   z-index: 2;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
   border: rgba(255, 255, 255, 0.4);
   background: rgba(255, 255, 255, 0.4);
 }
@@ -79,4 +79,11 @@
 .light-theme span.active:after,
 .light-theme span:hover:after {
   border-color: #000;
+}
+/* Light mode for login & signup */
+.light-theme .login-icon,
+.light-theme .signup-icon,
+.light-theme element {
+  color: #000;
+  opacity: 0.65;
 }
