@@ -50,7 +50,9 @@ $(document).ready(function () {
           $("#login-submit").prop("disabled", false);
           $("#player-login-form").trigger("reset");
           loginForm.style.display = "none";
-        }
+          document.querySelector('.user').innerHTML = '<span class="welcome-message">Welcome ' + response[0].username + '</span>';
+          document.querySelector(".welcome-message:after").style = ""
+        } 
       });
     }
   });
@@ -114,7 +116,7 @@ $(document).ready(function () {
               processData: false,
               data: JSON.stringify(jsondata),
               beforeSend: function () {
-                $("#signup-submit").prop("disabled", true);
+                e.preventDefault();
               },
             };
             $.ajax(settings).done(function (response) {
