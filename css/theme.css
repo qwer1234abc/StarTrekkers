@@ -6,11 +6,12 @@
 .light-theme {
   background-image: linear-gradient(
     to bottom right,
-    #e6f3fe,
-    #e2f6ff,
-    #d8fdfe,
-    #ebf6eb,
-    #f2f8eb
+    #f1f1f1,
+    #e3e3e3,
+    #d4d4d4,
+    #c6c6c6,
+    #b8b8b8,
+    #aaaaaa
   );
 }
 /* Light mode panel screen color */
@@ -19,8 +20,8 @@
   height: 100vh;
   position: absolute;
   z-index: 2;
-  border: rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.4);
+  border: rgba(213, 210, 210, 0.2);
+  background: rgba(168, 166, 166, 0.4);
   transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
   will-change: transform;
 }
@@ -34,7 +35,7 @@
 .light-theme .screen[data-x-pos="1"][data-y-pos="-1"] {
   z-index: 2;
   border: rgba(255, 255, 255, 0.4);
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(168, 166, 166, 0.4);
 }
 /* Light mode screen nav color */
 .light-theme .screen_nav {
@@ -73,6 +74,10 @@
 .light-theme #toggle_checkbox:checked + label:before {
   border: 3px solid #000;
 }
+.light-theme #toggle_checkbox:checked + #checkbox:before {
+  border-color: rgb(0, 0, 0);
+}
+
 .light-theme span.zoom:before {
   color: #000;
 }
@@ -86,4 +91,41 @@
 .light-theme element {
   color: #000;
   opacity: 0.65;
+}
+.light-theme .login-box .user-box input:focus ~ label,
+.light-theme .login-box .user-box input:valid ~ label,
+.light-theme .signup-box .user-box input:focus ~ label,
+.light-theme .signup-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #ee0d0d;
+  font-size: 12px;
+}
+.light-theme .login-box a:hover,
+.light-theme .signup-box a:hover {
+  background: #d51515;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #db4804, 0 0 25px #b30e0e, 0 0 50px #ea5039,
+    0 0 100px #e44646;
+}
+.light-theme .login-box form a,
+.light-theme .signup-box form a {
+  color: #b30e0e;
+}
+.light-theme .login-box a span:nth-child(1),
+.light-theme .signup-box a span:nth-child(1) {
+  background: linear-gradient(90deg, transparent, #d30b0b);
+}
+.light-theme .login-box a span:nth-child(2),
+.light-theme .signup-box a span:nth-child(2) {
+  background: linear-gradient(180deg, transparent, #d30b0b);
+}
+.light-theme .login-box a span:nth-child(3),
+.light-theme .signup-box a span:nth-child(3) {
+  background: linear-gradient(270deg, transparent, #d30b0b);
+}
+.light-theme .login-box a span:nth-child(4),
+.light-theme .signup-box a span:nth-child(4) {
+  background: linear-gradient(360deg, transparent, #d30b0b);
 }
