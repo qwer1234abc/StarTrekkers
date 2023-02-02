@@ -1,9 +1,6 @@
 /*========USER LOGIN AND SIGNUP POP OUT FORM=========*/
 
 // select the button to trigger the login & sign up form
-
-let form = document.querySelector("#player-signup-form")
-
 let loginBtn = document.querySelector(".user-login");
 let SignupBtn = document.querySelector(".user-signup");
 
@@ -19,10 +16,12 @@ let menu = document.querySelector(".screen_zoom")
 // add a click event listener to the login & sign up button
 loginBtn.addEventListener("click", () => {
   // only display the login form
+  SignupForm.style.display = "none";
   loginForm.style.display = "block";
 });
 SignupBtn.addEventListener("click", () => {
   // only display the signup form
+  loginForm.style.display = "none";
   SignupForm.style.display = "block";
 });
 // add a click event listener to the exit icon for both login and sign up
@@ -35,12 +34,4 @@ SignupExitIcon.addEventListener("click", () => {
   // only hide the signup form
   SignupForm.style.display = "none";
   menu.style.display = "block";
-});
-//Validating
-//Close the the other form when user click on either form while the other form is still on screen
-SignupBtn.addEventListener("click", function () {
-  loginForm.style.display = "none";
-});
-loginBtn.addEventListener("click", function () {
-  SignupForm.style.display = "none";
 });

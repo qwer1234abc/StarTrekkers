@@ -1,11 +1,70 @@
 $(document).ready(function () {
   const APIKEY = "63d08564a95709597409cf2d";
-  let logInCheck = localStorage.getItem("loggedIn");
-  let loggedInUser = localStorage.getItem("username");
-  if (logInCheck) {
-    document.querySelector(".user").innerHTML =
-      '<span class="welcome-message">Welcome ' + loggedInUser + "</span>";
+  $(".afterCheckIn").hide()
+  /*========USER LOGIN AND SIGNUP POP OUT FORM=========*/
+
+  // declaring variables
+  let loginBtn = $(".user-login"),
+    SignupBtn = $(".user-signup"),
+    loginForm = $(".login-box"),
+    SignupForm = $(".signup-box"),
+    LoginExitIcon = $(".exit-icon"),
+    SignupExitIcon = $(".exit-icon-signup"),
+    menu = $(".screen_zoom");
+
+  loginBtn.click(function (e) {
+    e.preventDefault();
+    SignupForm.hide()
+    loginForm.show()
+  });
+
+  SignupBtn.click(function (e) {
+    e.preventDefault();
+    loginForm.hide()
+    SignupForm.show()
+  });
+
+  LoginExitIcon.click(function (e) {
+    e.preventDefault();
+    loginForm.hide()
+    menu.show()
+  });
+
+  SignupExitIcon.click(function (e) {
+    e.preventDefault();
+    SignupForm.hide()
+    menu.show()
+  });
+  
+  function checkLoggedIn(checkedUser) {
+    let logInCheck = localStorage.getItem("loggedIn");
+    if (logInCheck) {
+      console.log(localStorage);
+      $(".beforeCheckIn").hide()
+      $(".afterCheckIn").show()
+      $(".checkedname").html(checkedUser)
+    }
   }
+
+  checkLoggedIn(localStorage.getItem("username"));
+
+  $("#signout").on("click", function (e) {
+    e.preventDefault();
+    console.log(localStorage);
+    localStorage.clear();
+    $(".beforeCheckIn").show()
+    $(".afterCheckIn").hide()
+  });
+  loginBtn.click(function (e) {
+    e.preventDefault();
+    loginForm.show();
+  });
+
+  SignupBtn.click(function (e) {
+    e.preventDefault();
+    SignupForm.show();
+  });
+
   function validatePassword(password, confirmpassword) {
     if (password == confirmpassword) {
       return true;
@@ -54,13 +113,10 @@ $(document).ready(function () {
           alert("Successfully signed in");
           $("#login-submit").prop("disabled", false);
           $("#player-login-form").trigger("reset");
-          loginForm.style.display = "none";
-          document.querySelector(".user").innerHTML =
-            '<span class="welcome-message">Welcome ' +
-            response[0].username +
-            "</span>";
+          loginForm.hide();
           localStorage.setItem("loggedIn", true);
           localStorage.setItem("username", response[0].username);
+          checkLoggedIn(response[0].username);
         }
       });
     }
@@ -133,13 +189,10 @@ $(document).ready(function () {
               $("#signup-submit").prop("disabled", false);
               alert("Registration successful!");
               $("#player-signup-form").trigger("reset");
-              SignupForm.style.display = "none";
-              document.querySelector(".user").innerHTML =
-                '<span class="welcome-message">Welcome ' +
-                player_username +
-                "</span>";
+              SignupForm.hide();
               localStorage.setItem("loggedIn", true);
               localStorage.setItem("username", player_username);
+              checkLoggedIn(player_username);
             });
           }
         });
