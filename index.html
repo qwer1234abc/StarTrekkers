@@ -57,16 +57,26 @@
         <div class="login-box">
           <i class="fa-sharp fa-solid fa-xmark exit-icon"></i>
           <h1>Login</h1>
-          <form>
+          <form id="player-login-form" autocomplete="off">
             <div class="user-box">
-              <input type="text" name="" required="" />
-              <label>Username</label>
+              <input
+              type="text"
+              id="player-login-username"
+              required
+              autocomplete="off"
+            />
+            <label for="player-login-username">Username</label>
             </div>
             <div class="user-box">
-              <input type="password" name="" required="" />
-              <label>Password</label>
+              <input
+                type="password"
+                id="player-login-password"
+                required
+                autocomplete="off"
+              />
+              <label for="player-login-password">Password</label>
             </div>
-            <a href="#">
+            <a href="#" id="login-submit">
               <span></span>
               <span></span>
               <span></span>
@@ -108,7 +118,7 @@
               />
               <label for="player-confirm-password">Confirm Password</label>
             </div>
-            <a href="#" id="player-submit">
+            <a href="#" id="signup-submit">
               <span></span>
               <span></span>
               <span></span>
