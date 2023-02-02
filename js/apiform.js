@@ -1,6 +1,11 @@
 $(document).ready(function () {
   const APIKEY = "63d08564a95709597409cf2d";
-  let login_password;
+  let logInCheck = localStorage.getItem("loggedIn");
+  let loggedInUser = localStorage.getItem("username");
+  if (logInCheck) {
+    document.querySelector(".user").innerHTML =
+      '<span class="welcome-message">Welcome ' + loggedInUser + "</span>";
+  }
   function validatePassword(password, confirmpassword) {
     if (password == confirmpassword) {
       return true;
@@ -12,7 +17,7 @@ $(document).ready(function () {
     e.preventDefault();
     $("#login-submit").prop("disabled", true);
     let login_username = $("#player-login-username").val();
-    login_password = $("#player-login-password").val();
+    let login_password = $("#player-login-password").val();
     let form = $("#player-login-form");
     let inputs = form.find("input");
     let isValid = true;
@@ -50,9 +55,13 @@ $(document).ready(function () {
           $("#login-submit").prop("disabled", false);
           $("#player-login-form").trigger("reset");
           loginForm.style.display = "none";
-          document.querySelector('.user').innerHTML = '<span class="welcome-message">Welcome ' + response[0].username + '</span>';
-          document.querySelector(".welcome-message:after").style = ""
-        } 
+          document.querySelector(".user").innerHTML =
+            '<span class="welcome-message">Welcome ' +
+            response[0].username +
+            "</span>";
+          localStorage.setItem("loggedIn", true);
+          localStorage.setItem("username", response[0].username);
+        }
       });
     }
   });
@@ -125,6 +134,12 @@ $(document).ready(function () {
               alert("Registration successful!");
               $("#player-signup-form").trigger("reset");
               SignupForm.style.display = "none";
+              document.querySelector(".user").innerHTML =
+                '<span class="welcome-message">Welcome ' +
+                player_username +
+                "</span>";
+              localStorage.setItem("loggedIn", true);
+              localStorage.setItem("username", player_username);
             });
           }
         });
