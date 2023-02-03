@@ -485,6 +485,7 @@ span.zoom:before {
 }
 .login-icon,
 .signup-icon,
+.signout-icon,
 element {
   color: #fff;
   opacity: 0.65;
@@ -868,6 +869,16 @@ input {
 .welcome-message {
   opacity: 100;
   cursor: default;
+}
+.afterCheckIn #signout:hover ~ .signout-icon {
+  transform: translateX(0.3rem);
+  opacity: 1;
+}
+.signout-icon {
+  opacity: 0.6;
+  padding-left: 5px;
+  font-size: 1.3rem;
+  transition: 0.4s;
 }
 #signout::after,
 .welcome-message::after,

@@ -92,6 +92,7 @@
 /* Light mode for login & signup */
 .light-theme .login-icon,
 .light-theme .signup-icon,
+.light-theme .signout-icon,
 .light-theme element {
   color: #000;
   opacity: 0.65;
