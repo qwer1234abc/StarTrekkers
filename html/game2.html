@@ -4,7 +4,57 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game 2</title>
+    <title>Brain Busters</title>    
+    <link rel="stylesheet" href="../css/game2.css" />
+    <link rel="shortcut icon" type="x-icon" href="../images/web-icon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Coda" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a6758ab841.js" crossorigin="anonymous"></script>
   </head>
-  <body></body>
+  <body>   
+    <!-- Audio start -->
+    <audio id="game2-music" loop src="../audio/game2-audio.mp3" loop></audio>
+    <!--Audio end -->
+
+    <!-- Exit button starts -->
+    <div class="Exit">
+      <p id="exit-btn">Exit<i class="fa-solid fa-person-walking-arrow-right exit-icon"></i></p>
+    </div>
+    <!-- Exit button ends -->
+
+    <!-- Restart button starts -->
+    <div class="Restart">
+      <p id="restart-btn">Restart<i class="fa-solid fa-arrow-rotate-right restart-icon"></i></p>
+    </div>
+    <!-- Restart button ends -->
+    
+    <!-- Game starts -->
+    <header>
+      <div class="user-info">
+        <div id="username-display">Player1:</div>
+        <div id="points-display"></div>
+      </div>
+      <h1>Brain Busters</h1>
+      <p>A game of true or false</p>
+      <button onclick="catAndQuest()" id="start"> START </button>      
+    </header>
+    <div class="container">
+      <div id="questions">
+        <div id="count"></div>
+        <div id="category"></span> </div>
+        <div id="quest"> </div>
+        <button id="answerT" onclick="answer(true)" style="display:none;">TRUE</button>
+        <button id="answerF" onclick="answer(false)" style="display:none;">FALSE</button>
+        <div id="points"></div>
+      </div>
+      <div id="winner" style="display:none;">YOU WIN!<br>Congratulations!</div>
+      <div id="looser" style="display:none;">Sorry, no more questions.<br> You loose!</div>
+      <button style="display:none;" id="reset" onclick="restart()"> PLAY AGAIN? </button>
+    </div>
+    <!-- Game ends -->
+
+    <!-- JavaScript -->
+    <script src="../js/game2.js"></script>
+    <!-- JavaScript -->
+  </body>
 </html>
