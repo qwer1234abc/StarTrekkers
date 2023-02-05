@@ -889,6 +889,7 @@ input {
   display: none;
 }
 .checkedname {
+  font-size: 1em;
   cursor: default;
   opacity: 10;
   color: rgba(129, 243, 253, 1);
