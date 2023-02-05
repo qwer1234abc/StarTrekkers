@@ -1,0 +1,47 @@
+@import url(//fonts.googleapis.com/css?family=VT323);
+* {
+  font-family: "VT323";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+body {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  letter-spacing: 0.2rem;
+  overflow: hidden;
+  text-transform: uppercase;
+  background: radial-gradient(ellipse at bottom, #162230 0%, #07080c 100%);
+}
+canvas {
+  padding: 0;
+  margin: auto;
+  display: block;
+  width: 800px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+  border-radius: 10px;
+}
+.game-container {
+  position: absolute;
+  top: 50;
+  right: 50;
+}
+.points-display {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 1000000;
+  color: aliceblue;
+}
