@@ -752,7 +752,6 @@ input {
   pointer-events: none;
   transition: 0.5s;
 }
-
 .signup-box .user-box input:focus ~ label,
 .signup-box .user-box input:valid ~ label {
   top: -20px;
@@ -760,7 +759,6 @@ input {
   color: #03e9f4;
   font-size: 12px;
 }
-
 .signup-box form a {
   position: relative;
   display: inline-block;
@@ -866,7 +864,8 @@ input {
     bottom: 100%;
   }
 }
-.welcome-message, .points-message {
+.welcome-message,
+.points-message {
   opacity: 100;
   cursor: default;
 }
@@ -890,7 +889,8 @@ input {
 .checkedname::after {
   display: none;
 }
-.checkedname, .points {
+.checkedname,
+.points {
   font-size: 1em;
   cursor: default;
   opacity: 10;
@@ -938,3 +938,103 @@ tr:hover {
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
 }
 /* Leaderboard table ends */
+
+/* Media Quries start */
+@media (max-width: 867px) {
+  .screen h2 {
+    font-size: 3.5em;
+  }
+}
+@media(max-width:646px)
+{
+  .login-box{
+    width: 400px;
+    padding: 50px;
+  }
+  .signup-box
+  {
+    width: 400px;
+    padding: 40px;
+  }
+}
+@media (max-width: 512px) {
+  .screen h2{
+    font-size: 3em;
+  }
+  span{
+    font-size: 1em;
+  }
+  .login-icon, .signup-icon{
+    font-size: 0.75em;
+  }
+  .login-box{
+    width: 300px;
+    padding: 40px;
+  }
+  .signup-box
+  {
+    width: 300px;
+    padding: 30px;
+  }
+  element{
+    font-size: 0.95em;
+  }
+  .login-box h1
+  {
+    font-size: 1.4em;
+    margin: 0 0 30px;
+  }
+  .signup-box h1
+  {
+    font-size: 1.4em;
+    margin: 0 0 15px;
+  }
+  .signup-box form a, .signup-box .user-box label, .signup-box .user-box input, .login-box form a,.login-box .user-box input, .login-box .user-box label
+  {
+    font-size: 12px;
+  }
+  .signup-box .user-box input{
+    margin-bottom: 20px;
+  }
+  .exit-icon{
+    top: 2rem
+  }
+  .login-box form a
+  {
+    margin-top: 10px;
+  }
+  .screen_nav-up,
+  .screen_nav-left,
+  .screen_nav-left-top,
+  .screen_nav-left-down,
+  .screen_nav-right,
+  .screen_nav-right-top,
+  .screen_nav-right-down,
+  .screen_nav-down {
+    display: none;
+  }
+}
+@media(max-width:448px)
+{
+  .screen h2{
+    font-size: 2.5em;
+  }
+  span{
+    font-size: 0.8em;
+  }
+  .login-icon, .signup-icon{
+    font-size: 0.6em;
+  }
+  .login-box{
+    width: 250px;
+    padding: 30px;
+  }
+  .signup-box
+  {
+    width: 250px;
+    padding: 20px;
+  }
+  element{
+    font-size: 0.8em;
+  }
+}
