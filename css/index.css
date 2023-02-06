@@ -866,7 +866,7 @@ input {
     bottom: 100%;
   }
 }
-.welcome-message {
+.welcome-message, .points-message {
   opacity: 100;
   cursor: default;
 }
@@ -882,13 +882,15 @@ input {
 }
 #signout::after,
 .welcome-message::after,
+.points-message::after,
+.points::after,
 .signout::after,
 .user-login::after,
 .user-signup::after,
 .checkedname::after {
   display: none;
 }
-.checkedname {
+.checkedname, .points {
   font-size: 1em;
   cursor: default;
   opacity: 10;

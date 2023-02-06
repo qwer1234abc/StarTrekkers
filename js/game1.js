@@ -15,7 +15,7 @@ var config = {
     update: update,
   },
 };
-
+const APIKEY = "63d08564a95709597409cf2d";
 var player;
 var stars;
 var bombs;
@@ -25,6 +25,8 @@ var score = 0;
 var gameOver = false;
 var scoreText;
 var previousScore;
+var userName;
+var totalPoints;
 
 var game = new Phaser.Game(config);
 
@@ -116,6 +118,26 @@ function create() {
       fill: "rgba(129, 243, 253, 1)",
     }
   );
+  userName = this.add.text(
+    16,
+    74,
+    "Username: " + localStorage.getItem("username"),
+    {
+      fontFamily: "VT323",
+      fontSize: "30px",
+      fill: "rgba(129, 243, 253, 1)",
+    }
+  );
+  userName = this.add.text(
+    16,
+    103,
+    "Total Points: " + localStorage.getItem("points"),
+    {
+      fontFamily: "VT323",
+      fontSize: "30px",
+      fill: "rgba(129, 243, 253, 1)",
+    }
+  );
   //  Collide the player and the stars with the platforms
   this.physics.add.collider(player, platforms);
   this.physics.add.collider(stars, platforms);
@@ -181,6 +203,10 @@ function hitBomb(player, bomb) {
   player.anims.play("turn");
 
   gameOver = true;
+  var points = parseInt(localStorage.getItem("points"), 10);
+  points += score;
+  localStorage.setItem("points", points);
+
   localStorage.setItem("previous_score", score);
   game.destroy();
   game = new Phaser.Game(config);

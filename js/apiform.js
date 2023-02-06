@@ -1,59 +1,79 @@
 $(document).ready(function () {
   const APIKEY = "63d08564a95709597409cf2d";
-  $(".afterCheckIn").hide()
-  /*========USER LOGIN AND SIGNUP POP OUT FORM=========*/
+  $(".afterCheckIn").hide();
 
-  // declaring variables
   let loginBtn = $(".user-login"),
     SignupBtn = $(".user-signup"),
     loginForm = $(".login-box"),
-    SignupForm = $(".signup-box"),
-    LoginExitIcon = $(".exit-icon"),
-    SignupExitIcon = $(".exit-icon-signup"),
-    menu = $(".screen_zoom");
+    SignupForm = $(".signup-box");
 
-  loginBtn.click(function (e) {
-    e.preventDefault();
-    SignupForm.hide()
-    loginForm.show()
-  });
-
-  SignupBtn.click(function (e) {
-    e.preventDefault();
-    loginForm.hide()
-    SignupForm.show()
-  });
-
-  LoginExitIcon.click(function (e) {
-    e.preventDefault();
-    loginForm.hide()
-    menu.show()
-  });
-
-  SignupExitIcon.click(function (e) {
-    e.preventDefault();
-    SignupForm.hide()
-    menu.show()
-  });
-  
-  function checkLoggedIn(checkedUser) {
+  function checkLoggedIn(checkedUser, checkedPoints) {
     let logInCheck = localStorage.getItem("loggedIn");
     if (logInCheck) {
-      console.log(localStorage);
-      $(".beforeCheckIn").hide()
-      $(".afterCheckIn").show()
-      $(".checkedname").html(checkedUser)
+      $(".beforeCheckIn").hide();
+      $(".afterCheckIn").show();
+      $(".checkedname").html(checkedUser);
+      $(".points").html(checkedPoints);
     }
   }
+  if (localStorage.getItem("loggedIn")) {
+    $(window).on("load", function () {
+      var settings = {
+        async: true,
+        crossDomain: true,
+        url: `https://restdb-efce.restdb.io/rest/players?q={"username":"${localStorage.getItem(
+          "username"
+        )}"}`,
+        method: "GET",
+        headers: {
+          "content-type": "application/json",
+          "x-apikey": APIKEY,
+          "cache-control": "no-cache",
+        },
+      };
 
-  checkLoggedIn(localStorage.getItem("username"));
+      $.ajax(settings).done(function (response) {
+        let = originalPass = response[0].password;
+        var jsondata = {
+          username: localStorage.getItem("username"),
+          password: originalPass,
+          points: localStorage.getItem("points"),
+        };
+        var settings = {
+          async: true,
+          crossDomain: true,
+          url: `https://restdb-efce.restdb.io/rest/players/${localStorage.getItem(
+            "id"
+          )}`,
+          method: "PUT",
+          headers: {
+            "content-type": "application/json",
+            "x-apikey": APIKEY,
+            "cache-control": "no-cache",
+          },
+          processData: false,
+          data: JSON.stringify(jsondata),
+        };
+        $.ajax(settings).done(function (response) {
+          console.log(response);
+        });
+      });
+    });
+  }
+
+  checkLoggedIn(
+    localStorage.getItem("username"),
+    localStorage.getItem("points"),
+    localStorage.getItem("id"),
+    localStorage.getItem("password")
+  );
 
   $("#signout").on("click", function (e) {
     e.preventDefault();
     console.log(localStorage);
     localStorage.clear();
-    $(".beforeCheckIn").show()
-    $(".afterCheckIn").hide()
+    $(".beforeCheckIn").show();
+    $(".afterCheckIn").hide();
   });
   loginBtn.click(function (e) {
     e.preventDefault();
@@ -116,7 +136,9 @@ $(document).ready(function () {
           loginForm.hide();
           localStorage.setItem("loggedIn", true);
           localStorage.setItem("username", response[0].username);
-          checkLoggedIn(response[0].username);
+          localStorage.setItem("points", response[0].points);
+          localStorage.setItem("id", response[0]._id);
+          checkLoggedIn(response[0].username, response[0].points);
         }
       });
     }
@@ -127,6 +149,7 @@ $(document).ready(function () {
     e.preventDefault();
     let player_username = $("#player-username").val();
     let player_password = $("#player-password").val();
+    let player_points = 0;
     let form = $("#player-signup-form");
     let inputs = form.find("input");
     let passwordCheck = true;
@@ -167,6 +190,7 @@ $(document).ready(function () {
             let jsondata = {
               username: player_username,
               password: player_password,
+              points: player_points,
             };
             let settings = {
               async: true,
@@ -192,7 +216,22 @@ $(document).ready(function () {
               SignupForm.hide();
               localStorage.setItem("loggedIn", true);
               localStorage.setItem("username", player_username);
-              checkLoggedIn(player_username);
+              localStorage.setItem("points", player_points);
+              var settings = {
+                async: true,
+                crossDomain: true,
+                url: `https://restdb-efce.restdb.io/rest/players?q={"username":"${player_username}"}`,
+                method: "GET",
+                headers: {
+                  "content-type": "application/json",
+                  "x-apikey": APIKEY,
+                  "cache-control": "no-cache",
+                },
+              };
+              $.ajax(settings).done(function (response) {
+                localStorage.setItem("id", response[0]._id);
+              });
+              checkLoggedIn(player_username, player_points);
             });
           }
         });
