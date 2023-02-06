@@ -116,6 +116,13 @@ function zoomIn() {
   removeClass(site, "show-all");
 }
 
+window.onmouseover = function () {
+  let bgMusic = document.getElementById("bg-music");
+  bgMusic.volume = 0.05
+  bgMusic.play()
+};
+
+
 $(document).ready(function () {
   $(document).keydown(function (e) {
     if (e.keyCode == 9) {
