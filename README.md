@@ -1,5 +1,9 @@
 # ID Assignment 2: Star Trekkers :sparkles:
 
+[Koo Bing En](https://github.com/bingenk)
+
+[Kelvin Beh Jueen Hao](https://github.com/qwer1234abc)
+
 ### Introduction:
 
 Welcome to Star Trekkers, an ultimate destination and platform for fans that are interested and fascinated about sci-fi which is very much related
@@ -42,6 +46,10 @@ For the features of the website it is ease to make users to understand and navig
 - `Login function - allow users to key in login info and collect key in information using API.`
 
 - `Games - exciting games for users play to get reward points.`
+
+##### **Here is the link to our github-pages:**
+
+[Link for github-pages](https://qwer1234abc.github.io/ID-Assignment-2/)
 
 ## Technologies Used
 
