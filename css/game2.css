@@ -45,6 +45,7 @@ header h1 {
 .user-info {
   position: absolute;
   display: flex;
+  flex-direction: column;
   flex-wrap: nowrap;
   gap: 10px;
   left: 46%;

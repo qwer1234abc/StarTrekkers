@@ -1,3 +1,5 @@
+document.getElementById("username").innerText = localStorage.getItem("username");
+document.getElementById("user-points").innerText = localStorage.getItem("points")
 var currentCategory = ["HTML", "CSS", "HTML & CSS"];
 var Questions = [
   //Store questions and answers
@@ -169,7 +171,6 @@ function catAndQuest() {
   start.style.display = "none";
   showButtons();
 
-  document.getElementById("points-display").innerHTML = points;
   document.getElementById("points").innerHTML = "Points: " + points;
   document.getElementById("count").innerHTML = "Question " + ++count + " / 27";
 
@@ -208,8 +209,8 @@ function deleteUsed() {
 function answer(value) {
   deleteUsed();
   if (value === question.answer) {
-    points++;
-    if (points == 15) {
+    points+= 5;
+    if (points == 75) {
       document.getElementById("answerT").style.display = "none";
       document.getElementById("answerF").style.display = "none";
       document.getElementById("questions").style.display = "none";
@@ -222,6 +223,9 @@ function answer(value) {
 
 //restart the game
 function restart() {
+  let gainedPoints = parseInt(localStorage.getItem("points"), 10);
+  gainedPoints += points;
+  localStorage.setItem("points", gainedPoints);
   document.location.href = "";
 }
 

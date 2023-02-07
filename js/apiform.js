@@ -16,7 +16,7 @@ $(document).ready(function () {
       $(".points").html(checkedPoints);
     }
   }
-  if (localStorage.getItem("loggedIn")) {
+  if (localStorage.getItem("loggedIn") || localStorage.getItem("loggedIn") != undefined) {
     $(window).on("load", function () {
       var settings = {
         async: true,
