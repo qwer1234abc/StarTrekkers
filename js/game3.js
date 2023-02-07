@@ -1,149 +1,138 @@
-var Breakout = new Phaser.Class({
-  Extends: Phaser.Scene,
+$(document).ready(function () {
+  $("#username").html(localStorage.getItem("username"));
+  $("#user-points").html(localStorage.getItem("points"));
 
-  initialize: function Breakout() {
-    Phaser.Scene.call(this, { key: "breakout" });
+  $.get("https://random-word-api.herokuapp.com/word?number=1", function (data) {
+    let selectedWord = data[0];
+    console.log(selectedWord);
+    let $wordE1 = $("#word");
+    let $wrongLettersE1 = $("#wrong-letters");
+    let $playAgainBtn = $("#play-button");
+    let $popup = $("#popup-container");
+    let $notification = $("#notification-container");
+    let $finalMessage = $("#final-message");
+    let $figureParts = $(".figure-part");
 
-    this.bricks;
-    this.paddle;
-    this.ball;
-  },
+    let correctLetters = [];
+    let wrongLetters = [];
 
-  preload: function () {
-    this.load.atlas(
-      "assets",
-      "../images/breakout.png",
-      "breakout.json"
-    );
-  },
+    function displayWord() {
+      $wordE1.html(
+        `${selectedWord
+          .split("")
+          .map(
+            (letter) =>
+              `<span class="letter">${
+                correctLetters.includes(letter) ? letter : ""
+              }</span>`
+          )
+          .join("")}`
+      );
 
-  create: function () {
-    //  Enable world bounds, but disable the floor
-    this.physics.world.setBoundsCollision(true, true, true, false);
+      let innerWord = $wordE1.text().replace(/\n/g, "");
 
-    //  Create the bricks in a 10x6 grid
-    this.bricks = this.physics.add.staticGroup({
-      key: "assets",
-      frame: ["blue1", "red1", "green1", "yellow1", "silver1", "purple1"],
-      frameQuantity: 10,
-      gridAlign: {
-        width: 10,
-        height: 6,
-        cellWidth: 64,
-        cellHeight: 32,
-        x: 112,
-        y: 100,
-      },
+      if (innerWord === selectedWord) {
+        $finalMessage.text("500 points 💰");
+        $popup.css("display", "flex");
+      }
+    }
+
+    function updateWrongLetterE1() {
+      $wrongLettersE1.html(
+        `${
+          wrongLetters.length > 0
+            ? "<p style='font-size: 1.5em;'>Wrong</p>"
+            : ""
+        }${wrongLetters.map((letter) => `<span>${letter}</span>`)}`
+      );
+
+      $figureParts.each(function (index) {
+        let errors = wrongLetters.length;
+
+        if (index < errors) {
+          $(this).css("display", "block");
+        } else {
+          $(this).css("display", "none");
+        }
+      });
+      if (wrongLetters.length === 3) {
+        let hint = "";
+        for (let i = 0; i < selectedWord.length; i++) {
+          if (!correctLetters.includes(selectedWord[i])) {
+            hint += selectedWord[i];
+            break;
+          }
+        }
+        alert(
+          `Come on it's not that hard: The word contains the letter "${hint}"`
+        );
+      }
+      if (wrongLetters.length === 5) {
+        let hint = "";
+        for (let i = 0; i < selectedWord.length; i++) {
+          if (!correctLetters.includes(selectedWord[i])) {
+            hint += selectedWord[i];
+            break;
+          }
+        }
+        alert(`Your saving grace: The word contains the letter "${hint}"`);
+      }
+      if (wrongLetters.length === $figureParts.length) {
+        $finalMessage.text("Try harder next time!");
+        $popup.css("display", "flex");
+      }
+    }
+
+    function showNotification() {
+      $notification.addClass("show");
+
+      setTimeout(() => {
+        $notification.removeClass("show");
+      }, 2000);
+    }
+
+    $(window).on("keydown", function (e) {
+      if ($popup.css("display") === "flex") {
+        return;
+      }
+      if (e.keyCode >= 65 && e.keyCode <= 90) {
+        let letter = e.key;
+
+        if (selectedWord.includes(letter)) {
+          if (!correctLetters.includes(letter)) {
+            correctLetters.push(letter);
+
+            displayWord();
+          } else {
+            showNotification();
+          }
+        } else {
+          if (!wrongLetters.includes(letter)) {
+            wrongLetters.push(letter);
+
+            updateWrongLetterE1();
+          } else {
+            showNotification();
+          }
+        }
+      }
     });
 
-    this.ball = this.physics.add
-      .image(400, 500, "assets", "ball1")
-      .setCollideWorldBounds(true)
-      .setBounce(1);
-    this.ball.setData("onPaddle", true);
-
-    this.paddle = this.physics.add
-      .image(400, 550, "assets", "paddle1")
-      .setImmovable();
-
-    //  Our colliders
-    this.physics.add.collider(
-      this.ball,
-      this.bricks,
-      this.hitBrick,
-      null,
-      this
-    );
-    this.physics.add.collider(
-      this.ball,
-      this.paddle,
-      this.hitPaddle,
-      null,
-      this
-    );
-
-    //  Input events
-    this.input.on(
-      "pointermove",
-      function (pointer) {
-        //  Keep the paddle within the game
-        this.paddle.x = Phaser.Math.Clamp(pointer.x, 52, 748);
-
-        if (this.ball.getData("onPaddle")) {
-          this.ball.x = this.paddle.x;
+    //Restart game and play again
+    $playAgainBtn.click(function () {
+      correctLetters.splice(0);
+      wrongLetters.splice(0);
+      $.get(
+        "https://random-word-api.herokuapp.com/word?number=1",
+        function (data) {
+          selectedWord = data[0];
+          console.log(selectedWord);
+          displayWord();
+          updateWrongLetterE1();
         }
-      },
-      this
-    );
-
-    this.input.on(
-      "pointerup",
-      function (pointer) {
-        if (this.ball.getData("onPaddle")) {
-          this.ball.setVelocity(-75, -300);
-          this.ball.setData("onPaddle", false);
-        }
-      },
-      this
-    );
-  },
-
-  hitBrick: function (ball, brick) {
-    brick.disableBody(true, true);
-
-    if (this.bricks.countActive() === 0) {
-      this.resetLevel();
-    }
-  },
-
-  resetBall: function () {
-    this.ball.setVelocity(0);
-    this.ball.setPosition(this.paddle.x, 500);
-    this.ball.setData("onPaddle", true);
-  },
-
-  resetLevel: function () {
-    this.resetBall();
-
-    this.bricks.children.each(function (brick) {
-      brick.enableBody(false, 0, 0, true, true);
+      );
+      $("#popup-container").hide();
     });
-  },
-
-  hitPaddle: function (ball, paddle) {
-    var diff = 0;
-
-    if (ball.x < paddle.x) {
-      //  Ball is on the left-hand side of the paddle
-      diff = paddle.x - ball.x;
-      ball.setVelocityX(-10 * diff);
-    } else if (ball.x > paddle.x) {
-      //  Ball is on the right-hand side of the paddle
-      diff = ball.x - paddle.x;
-      ball.setVelocityX(10 * diff);
-    } else {
-      //  Ball is perfectly in the middle
-      //  Add a little random X to stop it bouncing straight up!
-      ball.setVelocityX(2 + Math.random() * 8);
-    }
-  },
-
-  update: function () {
-    if (this.ball.y > 600) {
-      this.resetBall();
-    }
-  },
+    displayWord();
+  });
 });
-
-var config = {
-  type: Phaser.WEBGL,
-  width: 800,
-  height: 600,
-  parent: "phaser-example",
-  scene: [Breakout],
-  physics: {
-    default: "arcade",
-  },
-};
-
-var game = new Phaser.Game(config);

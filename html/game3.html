@@ -5,8 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game 3</title>
+    <link rel="stylesheet" href="../css/game3.css" />
+    <link rel="stylesheet" href="../css/background.css" />
   </head>
   <body>
-    
+    <!-- Background start -->
+    <div id="background_dots">
+      <div id="dots1"></div>
+      <div id="dots2"></div>
+      <div id="dots3"></div>
+    </div>
+    <!-- Background end -->
+    <main id="whole-container">
+      <h1>Hangman</h1>
+      <h3>Username: <span id="username"></span></h3>
+      <h3>Points: <span id="user-points"></span></h3>
+      <p id="game-info">Guess the correct word to earn 500 points!</p>
+      <div class="game-container">
+        <svg height="250" width="200" class="figure-container">
+          <!-- Rod -->
+          <line x1="60" y1="20" x2="140" y2="20" />
+          <line x1="140" y1="20" x2="140" y2="50" />
+          <line x1="60" y1="20" x2="60" y2="230" />
+          <line x1="20" y1="230" x2="100" y2="230" />
+
+          <!-- Head -->
+          <circle cx="140" cy="70" r="20" class="figure-part" />
+          <!-- Body -->
+          <line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
+          <!-- Arms -->
+          <line x1="140" y1="120" x2="120" y2="100" class="figure-part" />
+          <line x1="140" y1="120" x2="160" y2="100" class="figure-part" />
+          <!-- Legs -->
+          <line x1="140" y1="150" x2="120" y2="180" class="figure-part" />
+          <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
+        </svg>
+
+        <div class="wrong-letters-container">
+          <div id="wrong-letters"></div>
+        </div>
+        <div class="word" id="word"></div>
+      </div>
+
+      <!-- Container for final message -->
+      <div class="popup-container" id="popup-container">
+        <div class="popup">
+          <h2 id="final-message"></h2>
+          <button id="play-button">again!</button>
+        </div>
+      </div>
+
+      <!-- Notification -->
+      <div class="notification-container" id="notification-container">
+        <p>You have already entered this letter</p>
+      </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/game3.js"></script>
   </body>
 </html>
