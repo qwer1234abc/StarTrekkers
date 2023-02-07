@@ -1,0 +1,130 @@
+.screen #shop {
+  position: absolute;
+  top: 36%;
+}
+.shop-container {
+  position: absolute;
+  display: flex;
+  height: 300px;
+  width: 70%;
+  top: 45%;
+  left: 16%;
+}
+
+.card {
+  display: flex;
+  height: 350px;
+  width: 400px;
+  background-color: rgba(34, 35, 35, 0.55);
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+  /*margin-left: -50px; */
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+  z-index: 2;
+}
+
+.card:not(:first-child) {
+  margin-left: -60px;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.bar {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  height: 5px;
+  width: 150px;
+}
+
+.emptybar {
+  background-color: #2e3033;
+  width: 50%;
+  height: 100%;
+}
+
+.filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: rgba(129, 243, 253, 1);
+  /* background: linear-gradient(
+      90deg,
+      rgba(0, 154, 217, 1) 0%,
+      rgba(217, 147, 0, 1) 65%,
+      rgba(255, 186, 0, 1) 100%
+    ); */
+  transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+  width: 120px;
+  transition: 0.4s ease-out;
+}
+
+.buy {
+  color: #fff;
+  width: 130px;
+  height: 40px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  margin: 229px 0;
+  display: inline-block;
+  border-radius: 4px;
+}
+.buy-btn {
+  color: rgba(129, 243, 253, 1);
+  border: 1px solid rgb(3, 87, 94);
+  box-shadow: 0 0 5px rgb(9, 172, 187), 0 0 5px rgb(2, 74, 81) inset;
+  z-index: 1;
+  max-width: 90px;
+}
+.buy-btn:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background: rgba(129, 243, 253, 1);
+  box-shadow: 0 0 20px rgba(129, 243, 253, 1);
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+.buy-btn:hover {
+  color: #fff;
+}
+.buy-btn:hover:after {
+  left: 0;
+  width: 100%;
+}
+.buy-btn:active {
+  top: 2px;
+}
