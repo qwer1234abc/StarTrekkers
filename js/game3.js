@@ -35,6 +35,8 @@ $(document).ready(function () {
         let gainedPoints = parseInt(localStorage.getItem("points"), 10);
         gainedPoints += 500;
         localStorage.setItem("points", gainedPoints);
+        let updatedPoints = localStorage.getItem("points");
+        $("#user-points").text(updatedPoints);
         $finalMessage.text("500 points 💰");
         $popup.css("display", "flex");
       }
