@@ -23,6 +23,10 @@ body {
   color: rgba(129, 243, 253, 1);
   font-size: 28px;
 }
+#game_enter::after
+{
+  display: none;
+}
 .full-screen {
   transition: transform 0.9s cubic-bezier(0.55, 0, 0.1, 1);
 }
