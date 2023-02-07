@@ -32,6 +32,9 @@ $(document).ready(function () {
       let innerWord = $wordE1.text().replace(/\n/g, "");
 
       if (innerWord === selectedWord) {
+        let gainedPoints = parseInt(localStorage.getItem("points"), 10);
+        gainedPoints += 500;
+        localStorage.setItem("points", gainedPoints);
         $finalMessage.text("500 points 💰");
         $popup.css("display", "flex");
       }
