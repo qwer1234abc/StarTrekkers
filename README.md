@@ -6,12 +6,11 @@
 
 ### Introduction:
 
-Welcome to Star Trekkers, an ultimate destination and platform for fans that are interested and fascinated about sci-fi which is very much related
-to our webpage theme. Our webpage offers a wide range of features that cater to the needs of every Star Trek fan out there. With three exciting games, players can experience with.
+Welcome to Star Trekkers, an ultimate destination and platform for fans that are interested and fascinated about sci-fi which is very much related to our webpage theme. Our webpage offers a wide range of features that cater to the needs of every Star Trek fan out there. With three exciting games, players can experience from adventurous 'Stars Collector' game which requires to collect as many stars as possible to earn points, besides a game called 'Brain Busters' where player can experience the thrill of a challenging, yet entertaining quiz game that tests your patience and strategic thinking.
 
 In addition to the games, the platform also offer a social page where players can connect with other fans and share their experiences. Whether you're looking for tips and tricks or just want to chat with other fans, our social page is the perfect place to connect with like-minded individuals. Additionally, we have an inventory shop where players can purchase exclusive in-game items to enhance their gameplay experience. From extra life span or even extra XP, our shop has everything you need to take your game to the next level.
 
-Finally, with our unique gaming experience, players can engage in one of the games and earn rewards points. These points can then be used to climb the ranks of our leaderboard, where players can compete against each other to see who the top players in the community are. This is a great way to see how you stack up against other players and to see who the top players in the community are. Additionally, we have a mode page that enables users to switch between day and night mode, which can be adjusted to their preference. This allows players to fully immerse themselves in the game's environment and to enhance the overall experience.
+Finally, with our unique gaming experience, players can engage in one of the games and earn rewards points. These points can then be used to climb the ranks of our leaderboard, where players can compete against each other to see who the top players in the community are. This is a great way to see how you stack up against other players and to see who the top players in the community are. Additionally, we have a mode page that enables users to switch between day and night mode, which can be adjusted to their preferences. This allows players to fully immerse themselves in the game's environment and to enhance the overall experience.
 
 Overall, Star Trekker is the perfect destination for all Star Trek fans. With its wide range of features and its engaging gameplay, it offers an experience that is truly out of this world.
 
@@ -57,7 +56,7 @@ For the features of the website it is ease to make users to understand and navig
 
 - The project uses HTML to structure the web page and the content.
 
-2. [CSS](#)
+2. [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
 
 - The project uses CSS to illustrate the layout, fonts, and color of the website.
 
@@ -80,6 +79,10 @@ For the features of the website it is ease to make users to understand and navig
 7. [Flaticon](https://www.flaticon.com/)
 
 - The project uses flaticon for web's icon.
+
+8. [LottieFiles](https://lottiefiles.com/)
+
+- The project uses LottieFiles for more interative animation.
 
 ## Testing
 
@@ -107,7 +110,10 @@ One interesting bugs or problems we've discovered during our testing is that our
 
 ### Media
 
-- The video used in this project were obtained from [-](...).
-- The picture used in this project were obtained from [-](...).
+- The audio used in this project were obtained from [Aristeo Lugo - Youtube](https://www.youtube.com/watch?v=dyUOT_5JVjE) & [NoCopyrightSounds - Youtube](https://www.youtube.com/watch?v=HV7mLcsUp5U).
+
+- The icons used in this project were obtained from [Flaticon](https://www.flaticon.com/) & [Font Awesome](https://fontawesome.com/).
+
+- The animations used in this project were obtained from [LottieFiles](https://lottiefiles.com/).
 
 ### Acknowledgements
