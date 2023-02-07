@@ -16,6 +16,17 @@
       <div id="dots3"></div>
     </div>
     <!-- Background end -->
+    <div
+      id="loadingContainer"
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      "
+    >
+      <div id="loadingAnimation"></div>
+    </div>
     <main id="whole-container">
       <h1>Hangman</h1>
       <h3>Username: <span id="username"></span></h3>
@@ -60,8 +71,9 @@
         <p>You have already entered this letter</p>
       </div>
     </main>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.3/lottie_light.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/lottie.js"></script>
     <script src="../js/game3.js"></script>
   </body>
 </html>

@@ -205,3 +205,20 @@ h3 {
     left: 35px;
   }
 }
+#loadingAnimation {
+  font-family: "VT323", sans-serif;
+  text-transform: uppercase;
+  font-size: 3em;
+  color: rgba(129, 243, 253, 1);
+}
+@media (max-width: 500px) {
+  #loadingAnimation {
+    font-size: 2.5em;
+  }
+}
+@media (max-width: 390px)
+{
+  #loadingAnimation {
+    font-size: 1.8em;
+  }
+}

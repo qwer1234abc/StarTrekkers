@@ -7,10 +7,21 @@
     <title>Game 1</title>
     <link rel="stylesheet" href="../css/game1.css" />
     <link rel="stylesheet" href="../css/background.css" />
-    <link href="//fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=VT323" rel="stylesheet" />
     <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
   </head>
   <body>
+    <div
+      id="loadingContainer"
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      "
+    >
+      <div id="loadingAnimation"></div>
+    </div>
     <div id="background_dots">
       <div id="dots1"></div>
       <div id="dots2"></div>
@@ -18,7 +29,9 @@
     </div>
     <div class="game-container">
       <script src="../js/game1.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.3/lottie_light.min.js"></script>
+    <script src="../js/lottie.js"></script>
   </body>
 </html>
