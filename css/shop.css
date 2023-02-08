@@ -93,11 +93,12 @@
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
-  position: relative;
-  margin: 229px 0;
+  position: absolute;
+  margin-top: 220px;
   display: inline-block;
   border-radius: 4px;
 }
+
 .buy-btn {
   color: rgba(129, 243, 253, 1);
   border: 1px solid rgb(3, 87, 94);
@@ -105,6 +106,7 @@
   z-index: 1;
   max-width: 90px;
 }
+
 .buy-btn:after {
   position: absolute;
   content: "";
