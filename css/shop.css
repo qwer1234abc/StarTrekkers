@@ -136,19 +136,40 @@
   object-fit: cover;
   height: 170px;
 }
+@media (max-width: 1053px) {
+  #product-pic {
+    height: 25vmin;
+    width: 19vmin;
+  }
+}
 @media (max-width: 867px) {
   .card:hover .filledbar {
     width: 75px;
+  }
+  #product-pic {
+    height: 25vmin;
+    width: 17vmin;
   }
 }
 @media (max-width: 646px) {
   .card:hover .filledbar {
     width: 75px;
   }
+  #product-pic {
+    height: 100px;
+  }
+  #product-pic {
+    height: 30vmin;
+    width: 15vmin;
+  }
 }
 @media (max-width: 512px) {
   .card:hover .filledbar {
     width: 73px;
+  }
+  #product-pic {
+    height: 35vmin;
+    width: 15vmin;
   }
 }
 @media (max-width: 448px) {
@@ -162,5 +183,15 @@
     width: 70px;
     height: 38px;
     padding: 6px 20px;
+  }
+  #product-pic {
+    height: 35vmin;
+    width: 15vmin;
+  }
+}
+@media (max-width: 448px) {
+  #product-pic {
+    height: 40vmin;
+    width: 15vmin;
   }
 }
