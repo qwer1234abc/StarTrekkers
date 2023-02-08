@@ -136,3 +136,31 @@
   object-fit: cover;
   height: 170px;
 }
+@media (max-width: 867px) {
+  .card:hover .filledbar {
+    width: 75px;
+  }
+}
+@media (max-width: 646px) {
+  .card:hover .filledbar {
+    width: 75px;
+  }
+}
+@media (max-width: 512px) {
+  .card:hover .filledbar {
+    width: 73px;
+  }
+}
+@media (max-width: 448px) {
+  .emptybar {
+    width: 40%;
+  }
+  .card:hover .filledbar {
+    width: 72px;
+  }
+  .buy {
+    width: 70px;
+    height: 38px;
+    padding: 6px 20px;
+  }
+}

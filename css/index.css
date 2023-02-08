@@ -988,7 +988,8 @@ tr:hover {
 
 /* Media Quries start */
 @media (max-width: 867px) {
-  .screen h2 {
+  .screen h2,
+  .light-theme .screen h2 {
     font-size: 3.5em;
   }
 }
@@ -1003,7 +1004,8 @@ tr:hover {
   }
 }
 @media (max-width: 512px) {
-  .screen h2 {
+  .screen h2,
+  .light-theme .screen h2 {
     font-size: 3em;
   }
   span {
@@ -1059,9 +1061,45 @@ tr:hover {
   .screen_nav-down {
     display: none;
   }
+  #credit-text {
+    font-size: 40px;
+  }
+
+  #checkbox {
+    width: 100px;
+    height: 30px;
+  }
+
+  #checkbox:before {
+    width: 33px;
+    height: 33px;
+  }
+
+  #checkbox:after {
+    width: 100px;
+    height: 50px;
+  }
+
+  #toggle_checkbox:checked + #checkbox:before {
+    width: 100px;
+    height: 50px;
+  }
+
+  #toggle_checkbox:checked + #checkbox:after {
+    width: 33px;
+    height: 33px;
+  }
+  ul li a {
+    width: 50px;
+    height: 50px;
+    line-height: 51px;
+    font-size: 24px;
+    margin: 0 7px;
+  }
 }
 @media (max-width: 448px) {
-  .screen h2 {
+  .screen h2,
+  .light-theme .screen h2 {
     font-size: 2.5em;
   }
   span {
@@ -1081,5 +1119,15 @@ tr:hover {
   }
   element {
     font-size: 0.8em;
+  }
+  #credit-text {
+    font-size: 30px;
+  }
+  ul li a {
+    width: 45px;
+    height: 45px;
+    line-height: 46px;
+    font-size: 24px;
+    margin: 0 7px;
   }
 }
