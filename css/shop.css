@@ -130,3 +130,9 @@
 .buy-btn:active {
   top: 2px;
 }
+#product-pic {
+  position: absolute;
+  top: 19px;
+  object-fit: cover;
+  height: 170px;
+}
