@@ -1,307 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Star Trekkers</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://kit.fontawesome.com/ef95596f3c.js" crossorigin="anonymous"></script>
-  <link rel="shortcut icon" type="x-icon" href="images/web-icon.png" />
-  <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="css/index.css" />
-  <link rel="stylesheet" href="css/background.css" />
-  <link rel="stylesheet" href="css/theme-background.css" />
-  <link rel="stylesheet" href="css/theme.css" />
-  <link rel="stylesheet" href="css/shop.css" />
-</head>
-<body>
-  <!-- Audio start -->
-  <audio id="bg-music" loop src="audio/background-audio.mp3" loop></audio>
-  <!--Audio end -->
-  <!-- Background start -->
-  <div id="background_dots">
-    <div id="dots1"></div>
-    <div id="dots2"></div>
-    <div id="dots3"></div>
-  </div>
-  <!-- Background end -->
-  <!-- Screens-wrap start -->
-  <div class="full-screen">
-    <!-- Animation-wrap start -->
-    <div class="screen-wrap animate-scale js-animation" data-animation="animate-scale">
-      <!-- Home page start -->
-      <div class="screen" data-x-pos="0" data-y-pos="0">
-        <span class="screen_nav screen_nav-up js-up">game 2</span><span
-          class="screen_nav screen_nav-right-top js-up js-right">game 3</span><span
-          class="screen_nav screen_nav-left-top js-up js-left">game 1</span><span
-          class="screen_nav screen_nav-left js-left">shop</span><span class="screen_nav screen_nav-right js-right"
-          id="leaderboard">leaderboard</span><span
-          class="screen_nav screen_nav-right-down js-down js-right">socials</span><span
-          class="screen_nav screen_nav-left-down js-down js-left">mode</span><span
-          class="screen_nav screen_nav-down js-down">credits</span><span class="screen_zoom js-zoom zoom"></span>
-        <h2>
-          Star Trekkers
-          <div class="underscore">_</div>
-        </h2>
-        <!-- user login & sign up -->
-        <section>
-          <div class="user">
-            <div class="beforeCheckIn">
-              <span class="user-login">Login</span><i class="fa-solid fa-arrow-right login-icon"></i>
-              <element>&nbsp|&nbsp</element><span class="user-signup">Sign Up Now</span><i
-              class="fa-sharp fa-solid fa-exclamation signup-icon"></i>
-            </div>
-              <div class="afterCheckIn">
-                <span class="welcome-message">Welcome <span class="checkedname"></span></span>
-                <span class="points-message">Points: <span class="points"></span></span><br>
-                <span id="signout">Sign Out</span><i class="fa-solid fa-arrow-right-from-bracket signout-icon"></i>
-              </div>
-          </div>
-        </section>
-        <!-- user login & sign up -->
-        <!-- user login pop up  -->
-        <div class="login-box">
-          <i class="fa-sharp fa-solid fa-xmark exit-icon"></i>
-          <h1>Login</h1>
-          <form id="player-login-form" autocomplete="off">
-            <div class="user-box">
-              <input
-              type="text"
-              id="player-login-username"
-              required
-              autocomplete="off"
-            />
-            <label for="player-login-username">Username</label>
-            </div>
-            <div class="user-box">
-              <input
-                type="password"
-                id="player-login-password"
-                required
-                autocomplete="off"
-              />
-              <label for="player-login-password">Password</label>
-            </div>
-            <a href="#" id="login-submit">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              Submit
-            </a>
-          </form>
-        </div>
-        <!-- user login pop up  -->
-        <!-- user sign up pop up  -->
-        <div class="signup-box">
-          <i class="fa-sharp fa-solid fa-xmark exit-icon-signup"></i>
-          <h1>Sign Up</h1>
-          <form id="player-signup-form" autocomplete="off">
-            <div class="user-box">
-              <input
-                type="text"
-                id="player-username"
-                required
-                autocomplete="off"
-              />
-              <label for="player-username">Username</label>
-            </div>
-            <div class="user-box">
-              <input
-                type="password"
-                id="player-password"
-                required
-                autocomplete="off"
-              />
-              <label for="player-password">Password</label>
-            </div>
-            <div class="user-box">
-              <input
-                type="password"
-                id="player-confirm-password"
-                required
-                autocomplete="off"
-              />
-              <label for="player-confirm-password">Confirm Password</label>
-            </div>
-            <a href="#" id="signup-submit">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              Submit
-            </a>
-          </form>
-          <!-- user sign up pop up  -->
-        </div>
-        <!-- Home page end -->
-        <!-- Game 1 start -->
-        <div class="screen" data-x-pos="-1" data-y-pos="1">
-          <span class="screen_nav screen_nav-right-down js-down js-right">home</span><span
-            class="screen_nav screen_nav-right js-right">game 2</span><span
-            class="screen_nav screen_nav-down js-down">shop</span><span class="screen_zoom js-zoom zoom"></span>
-          <h2>
-            Stars Collector
-            <section id="game_enter">
-              <br /><a href="html/game1.html"><span id="game_enter">PRESS TO ENTER</span></a>
-            </section>
-          </h2>
-        </div>
-        <!-- Game 1 end -->
-        <!-- Game 2 start -->
-        <div class="screen" data-x-pos="0" data-y-pos="1">
-          <span class="screen_nav screen_nav-left js-left">game 1</span><span
-            class="screen_nav screen_nav-right js-right">game 3</span><span
-            class="screen_nav screen_nav-right-down js-down js-right">leaderboard</span><span
-            class="screen_nav screen_nav-left-down js-down js-left">shop</span><span
-            class="screen_nav screen_nav-down js-down">home</span><span class="screen_zoom js-zoom zoom"></span>
-          <h2>
-            Brain Busters
-            <section id="game_enter">
-              <br /><a href="html/game2.html"><span id="game_enter">PRESS TO ENTER</span></a>
-            </section>
-          </h2>
-        </div>
-        <!-- Game 2 end -->
-        <!-- Game 3 start -->
-        <div class="screen" data-x-pos="1" data-y-pos="1">
-          <span class="screen_nav screen_nav-left-down js-down js-left">home</span><span
-            class="screen_nav screen_nav-left js-left">game 2</span><span
-            class="screen_nav screen_nav-down js-down">leaderboard</span><span class="screen_zoom js-zoom zoom"></span>
-          <h2>
-            Hangman
-            <section id="game_enter">
-              <br /><a href="html/game3.html"><span id="game_enter">PRESS TO ENTER</span></a>
-            </section>
-          </h2>
-        </div>
-        <!-- Game 3 end -->
-        <!-- Shop start -->
-        <div class="screen" data-x-pos="-1" data-y-pos="0">
-          <span class="screen_nav screen_nav-up js-up">game 1</span><span
-            class="screen_nav screen_nav-right-top js-up js-right">game 2</span><span
-            class="screen_nav screen_nav-right js-right">home</span><span
-            class="screen_nav screen_nav-right-down js-down js-right">credits</span><span
-            class="screen_nav screen_nav-down js-down">mode</span><span class="screen_zoom js-zoom zoom"> </span>
-          <h2 id="shop">shop</h2>
-          <div class="shop-container">
-            <div class="card">
-              <h3 class="title">Item 1</h3>
-              <div class="bar">
-                <div class="emptybar"></div>
-                <div class="filledbar"></div>
-                <button class="buy buy-btn">Buy</button>
-              </div>              
-            </div>
-            <div class="card">
-              <h3 class="title">Item 2</h3>
-              <div class="bar">
-                <div class="emptybar"></div>
-                <div class="filledbar"></div>
-                <button class="buy buy-btn">Buy</button>
-              </div>              
-            </div>
-            <div class="card">
-              <h3 class="title">Item 3</h3>
-              <div class="bar">
-                <div class="emptybar"></div>
-                <div class="filledbar"></div>
-                <button class="buy buy-btn">Buy</button>
-              </div>              
-            </div>
-            <div class="card">
-              <h3 class="title">Item 4</h3>
-              <div class="bar">
-                <div class="emptybar"></div>
-                <div class="filledbar"></div>
-                <button class="buy buy-btn">Buy</button>
-              </div>              
-            </div>
-            <div class="card">
-              <h3 class="title">Item 5</h3>
-              <div class="bar">
-                <div class="emptybar"></div>
-                <div class="filledbar"></div>
-                <button class="buy buy-btn">Buy</button>
-              </div>             
-            </div>
-          </div> 
-        </div>
-        <!-- Shop end -->
-        <!-- Mode start -->
-        <div class="screen" data-x-pos="-1" data-y-pos="-1">
-          <span class="screen_nav screen_nav-up js-up">shop</span><span
-            class="screen_nav screen_nav-right-top js-up js-right">home</span><span
-            class="screen_nav screen_nav-right js-right">credits</span><span class="screen_zoom js-zoom zoom"></span>
-          <h2>mode</h2>
-          <div class="toggle-btn">
-            <input class="change-theme" type="checkbox" id="toggle_checkbox" />
-            <label id="checkbox" for="toggle_checkbox"></label>
-          </div>
-        </div>
-        <!-- Mode end -->
-        <!-- Social start -->
-        <div class="screen" data-x-pos="1" data-y-pos="-1">
-          <span class="screen_nav screen_nav-up js-up">leaderboard</span><span
-            class="screen_nav screen_nav-left-top js-up js-left">home</span><span
-            class="screen_nav screen_nav-left js-left">credits</span><span class="screen_zoom js-zoom zoom"></span>
-          <div class="socials-icon">
-            <ul>
-              <li>
-                <a href="https://www.facebook.com/bingen.koo/" target="_blank">
-                  <i class="fab fa-facebook-f icon" id="facebook"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/14997db6b2a447d" target="_blank"><i class="fab fa-twitter icon"
-                    id="twitter"></i></a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/kelvin-beh-qwer1234abc/" target="_blank"><i
-                    class="fab fa-linkedin-in icon" id="linkedin"></i></a>
-              </li>
-              <li>
-                <a href="https://www.youtube.com/channel/UCSfpkhzJpA7TH_wJFeZMOmQ" target="_blank"><i
-                    class="fab fa-youtube icon" id="youtube"></i></a>
-              </li>
-            </ul>
-          </div>
-          <h2>socials</h2>
-          <!-- Social end -->
-          <!-- Leaderboard start -->
-        </div>
-        <div class="screen" data-x-pos="1" data-y-pos="0">
-          <span class="screen_nav screen_nav-up js-up">game 3</span><span
-            class="screen_nav screen_nav-left-top js-up js-left">game 2</span><span
-            class="screen_nav screen_nav-left js-left">home</span><span
-            class="screen_nav screen_nav-left-down js-down js-left">credits</span><span
-            class="screen_nav screen_nav-down js-down">socials</span><span class="screen_zoom js-zoom zoom"></span>
-          <h2 class="leaderboard">leaderboard</h2>
-          <table>
-            <tr id="header_leaderboard">
-                <th>Username</th>
-                <th>Score</th>                    
-            </tr>
-    
-            
-        </table>
-        </div>
-        <!-- Leaderboard end -->
-        <!-- Credit start -->
-        <div class="screen" data-x-pos="0" data-y-pos="-1">
-          <span class="screen_nav screen_nav-up js-up">home</span><span
-            class="screen_nav screen_nav-left-top js-up js-left">shop</span><span
-            class="screen_nav screen_nav-right-top js-up js-right">leaderboard</span><span
-            class="screen_nav screen_nav-left js-left">mode</span><span
-            class="screen_nav screen_nav-right js-right">socials</span><span class="screen_zoom js-zoom zoom"></span>
-          <h2>credits <br />Kelvin <br />BingEn</h2>
-          >
-        </div>
-        <!-- Credit end -->
-      </div>
-      <!-- Animation-wrap end-->
+  <head>
+    <meta charset="UTF-8" />
+    <title>Star Trekkers</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/ef95596f3c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" type="x-icon" href="images/web-icon.png" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/background.css" />
+    <link rel="stylesheet" href="css/theme-background.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/shop.css" />
+  </head>
+  <body>
+    <!-- Audio start -->
+    <audio id="bg-music" loop src="audio/background-audio.mp3" loop></audio>
+    <!--Audio end -->
+    <!-- Background start -->
+    <div id="background_dots">
+      <div id="dots1"></div>
+      <div id="dots2"></div>
+      <div id="dots3"></div>
     </div>
-  </div>
+    <!-- Background end -->
+    <!-- Screens-wrap start -->
+    <div class="full-screen">
+      <!-- Animation-wrap start -->
+      <div
+        class="screen-wrap animate-scale js-animation"
+        data-animation="animate-scale"
+      >
+        <!-- Home page start -->
+        <div class="screen" data-x-pos="0" data-y-pos="0">
+          <span class="screen_nav screen_nav-up js-up">game 2</span
+          ><span class="screen_nav screen_nav-right-top js-up js-right"
+            >game 3</span
+          ><span class="screen_nav screen_nav-left-top js-up js-left"
+            >game 1</span
+          ><span class="screen_nav screen_nav-left js-left">shop</span
+          ><span class="screen_nav screen_nav-right js-right" id="leaderboard"
+            >leaderboard</span
+          ><span class="screen_nav screen_nav-right-down js-down js-right"
+            >socials</span
+          ><span class="screen_nav screen_nav-left-down js-down js-left"
+            >mode</span
+          ><span class="screen_nav screen_nav-down js-down">credits</span
+          ><span class="screen_zoom js-zoom zoom"></span>
+          <h2>
+            Star Trekkers
+            <div class="underscore">_</div>
+          </h2>
+          <!-- user login & sign up -->
+          <section>
+            <div class="user">
+              <div class="beforeCheckIn">
+                <span class="user-login">Login</span
+                ><i class="fa-solid fa-arrow-right login-icon"></i>
+                <element>&nbsp|&nbsp</element
+                ><span class="user-signup">Sign Up Now</span
+                ><i class="fa-sharp fa-solid fa-exclamation signup-icon"></i>
+              </div>
+              <div class="afterCheckIn">
+                <span class="welcome-message"
+                  >Welcome <span class="checkedname"></span
+                ></span>
+                <span class="points-message"
+                  >Points: <span class="points"></span></span
+                ><br />
+                <span id="signout">Sign Out</span
+                ><i
+                  class="fa-solid fa-arrow-right-from-bracket signout-icon"
+                ></i>
+              </div>
+            </div>
+          </section>
+          <!-- user login & sign up -->
+          <!-- user login pop up  -->
+          <div class="login-box">
+            <i class="fa-sharp fa-solid fa-xmark exit-icon"></i>
+            <h1>Login</h1>
+            <form id="player-login-form" autocomplete="off">
+              <div class="user-box">
+                <input
+                  type="text"
+                  id="player-login-username"
+                  required
+                  autocomplete="off"
+                />
+                <label for="player-login-username">Username</label>
+              </div>
+              <div class="user-box">
+                <input
+                  type="password"
+                  id="player-login-password"
+                  required
+                  autocomplete="off"
+                />
+                <label for="player-login-password">Password</label>
+              </div>
+              <a href="#" id="login-submit">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
+              </a>
+            </form>
+          </div>
+          <!-- user login pop up  -->
+          <!-- user sign up pop up  -->
+          <div class="signup-box">
+            <i class="fa-sharp fa-solid fa-xmark exit-icon-signup"></i>
+            <h1>Sign Up</h1>
+            <form id="player-signup-form" autocomplete="off">
+              <div class="user-box">
+                <input
+                  type="text"
+                  id="player-username"
+                  required
+                  autocomplete="off"
+                />
+                <label for="player-username">Username</label>
+              </div>
+              <div class="user-box">
+                <input
+                  type="password"
+                  id="player-password"
+                  required
+                  autocomplete="off"
+                />
+                <label for="player-password">Password</label>
+              </div>
+              <div class="user-box">
+                <input
+                  type="password"
+                  id="player-confirm-password"
+                  required
+                  autocomplete="off"
+                />
+                <label for="player-confirm-password">Confirm Password</label>
+              </div>
+              <a href="#" id="signup-submit">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
+              </a>
+            </form>
+            <!-- user sign up pop up  -->
+          </div>
+          <!-- Home page end -->
+          <!-- Game 1 start -->
+          <div class="screen" data-x-pos="-1" data-y-pos="1">
+            <span class="screen_nav screen_nav-right-down js-down js-right"
+              >home</span
+            ><span class="screen_nav screen_nav-right js-right">game 2</span
+            ><span class="screen_nav screen_nav-down js-down">shop</span
+            ><span class="screen_zoom js-zoom zoom"></span>
+            <h2>
+              Stars Collector
+              <br /><a href="html/game1.html"
+                ><span id="game_enter">PRESS TO ENTER</span></a
+              >
+            </h2>
+          </div>
+          <!-- Game 1 end -->
+          <!-- Game 2 start -->
+          <div class="screen" data-x-pos="0" data-y-pos="1">
+            <span class="screen_nav screen_nav-left js-left">game 1</span
+            ><span class="screen_nav screen_nav-right js-right">game 3</span
+            ><span class="screen_nav screen_nav-right-down js-down js-right"
+              >leaderboard</span
+            ><span class="screen_nav screen_nav-left-down js-down js-left"
+              >shop</span
+            ><span class="screen_nav screen_nav-down js-down">home</span
+            ><span class="screen_zoom js-zoom zoom"></span>
+            <h2>
+              Brain Busters
+              <br /><a href="html/game2.html"
+                ><span id="game_enter">PRESS TO ENTER</span></a
+              >
+            </h2>
+          </div>
+          <!-- Game 2 end -->
+          <!-- Game 3 start -->
+          <div class="screen" data-x-pos="1" data-y-pos="1">
+            <span class="screen_nav screen_nav-left-down js-down js-left"
+              >home</span
+            ><span class="screen_nav screen_nav-left js-left">game 2</span
+            ><span class="screen_nav screen_nav-down js-down">leaderboard</span
+            ><span class="screen_zoom js-zoom zoom"></span>
+            <h2>
+              Hangman
+              <br /><a href="html/game3.html"
+                ><span id="game_enter">PRESS TO ENTER</span></a
+              >
+            </h2>
+          </div>
+          <!-- Game 3 end -->
+          <!-- Shop start -->
+          <div class="screen" data-x-pos="-1" data-y-pos="0">
+            <span class="screen_nav screen_nav-up js-up">game 1</span
+            ><span class="screen_nav screen_nav-right-top js-up js-right"
+              >game 2</span
+            ><span class="screen_nav screen_nav-right js-right">home</span
+            ><span class="screen_nav screen_nav-right-down js-down js-right"
+              >credits</span
+            ><span class="screen_nav screen_nav-down js-down">mode</span
+            ><span class="screen_zoom js-zoom zoom"> </span>
+            <h2 id="shop">shop</h2>
+            <div class="shop-container">
+              <div class="card">
+                <h3 class="title">Item 1</h3>
+                <div class="bar">
+                  <div class="emptybar"></div>
+                  <div class="filledbar"></div>
+                  <button class="buy buy-btn">Buy</button>
+                </div>
+              </div>
+              <div class="card">
+                <h3 class="title">Item 2</h3>
+                <div class="bar">
+                  <div class="emptybar"></div>
+                  <div class="filledbar"></div>
+                  <button class="buy buy-btn">Buy</button>
+                </div>
+              </div>
+              <div class="card">
+                <h3 class="title">Item 3</h3>
+                <div class="bar">
+                  <div class="emptybar"></div>
+                  <div class="filledbar"></div>
+                  <button class="buy buy-btn">Buy</button>
+                </div>
+              </div>
+              <div class="card">
+                <h3 class="title">Item 4</h3>
+                <div class="bar">
+                  <div class="emptybar"></div>
+                  <div class="filledbar"></div>
+                  <button class="buy buy-btn">Buy</button>
+                </div>
+              </div>
+              <div class="card">
+                <h3 class="title">Item 5</h3>
+                <div class="bar">
+                  <div class="emptybar"></div>
+                  <div class="filledbar"></div>
+                  <button class="buy buy-btn">Buy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Shop end -->
+          <!-- Mode start -->
+          <div class="screen" data-x-pos="-1" data-y-pos="-1">
+            <span class="screen_nav screen_nav-up js-up">shop</span
+            ><span class="screen_nav screen_nav-right-top js-up js-right"
+              >home</span
+            ><span class="screen_nav screen_nav-right js-right">credits</span
+            ><span class="screen_zoom js-zoom zoom"></span>
+            <h2>mode</h2>
+            <div class="toggle-btn">
+              <input
+                class="change-theme"
+                type="checkbox"
+                id="toggle_checkbox"
+              />
+              <label id="checkbox" for="toggle_checkbox"></label>
+            </div>
+          </div>
+          <!-- Mode end -->
+          <!-- Social start -->
+          <div class="screen" data-x-pos="1" data-y-pos="-1">
+            <span class="screen_nav screen_nav-up js-up">leaderboard</span
+            ><span class="screen_nav screen_nav-left-top js-up js-left"
+              >home</span
+            ><span class="screen_nav screen_nav-left js-left">credits</span
+            ><span class="screen_zoom js-zoom zoom"></span>
+            <div class="socials-icon">
+              <ul>
+                <li>
+                  <a
+                    href="https://www.facebook.com/bingen.koo/"
+                    target="_blank"
+                  >
+                    <i class="fab fa-facebook-f icon" id="facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/14997db6b2a447d" target="_blank"
+                    ><i class="fab fa-twitter icon" id="twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/kelvin-beh-qwer1234abc/"
+                    target="_blank"
+                    ><i class="fab fa-linkedin-in icon" id="linkedin"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/channel/UCSfpkhzJpA7TH_wJFeZMOmQ"
+                    target="_blank"
+                    ><i class="fab fa-youtube icon" id="youtube"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <h2>socials</h2>
+            <!-- Social end -->
+            <!-- Leaderboard start -->
+          </div>
+          <div class="screen" data-x-pos="1" data-y-pos="0">
+            <span class="screen_nav screen_nav-up js-up">game 3</span
+            ><span class="screen_nav screen_nav-left-top js-up js-left"
+              >game 2</span
+            ><span class="screen_nav screen_nav-left js-left">home</span
+            ><span class="screen_nav screen_nav-left-down js-down js-left"
+              >credits</span
+            ><span class="screen_nav screen_nav-down js-down">socials</span
+            ><span class="screen_zoom js-zoom zoom"></span>
+            <h2 class="leaderboard">leaderboard</h2>
+            <table>
+              <tr id="header_leaderboard">
+                <th>Username</th>
+                <th>Score</th>
+              </tr>
+            </table>
+          </div>
+          <!-- Leaderboard end -->
+          <!-- Credit start -->
+          <div class="screen" data-x-pos="0" data-y-pos="-1">
+            <span class="screen_nav screen_nav-up js-up">home</span
+            ><span class="screen_nav screen_nav-left-top js-up js-left"
+              >shop</span
+            ><span class="screen_nav screen_nav-right-top js-up js-right"
+              >leaderboard</span
+            ><span class="screen_nav screen_nav-left js-left">mode</span
+            ><span class="screen_nav screen_nav-right js-right">socials</span
+            ><span class="screen_zoom js-zoom zoom"></span>
+            <h2>credits <br />Kelvin <br />BingEn</h2>
+            >
+          </div>
+          <!-- Credit end -->
+        </div>
+        <!-- Animation-wrap end-->
+      </div>
+    </div>
     <!-- Screen-wrap end-->
     <!-- JS start -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -311,5 +364,5 @@
     <script src="js/user-form.js"></script>
     <script src="js/leaderboard.js"></script>
     <!--JS end -->
-</body>
+  </body>
 </html>

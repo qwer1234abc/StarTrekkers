@@ -3,6 +3,7 @@ body {
   font-family: "VT323";
   font-size: 25px;
   background-color: #b1bed3;
+  overflow-x: hidden;
 }
 .Exit {
   position: absolute;
@@ -263,7 +264,7 @@ header p {
 
   header p {
     padding-top: 40px !important;
-    font-size: 10px !important;
+    font-size: 16px !important;
     letter-spacing: 7px !important;
   }
 
