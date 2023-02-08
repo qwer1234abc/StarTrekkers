@@ -23,8 +23,7 @@ body {
   color: rgba(129, 243, 253, 1);
   font-size: 28px;
 }
-#game_enter::after
-{
+#game_enter::after {
   display: none;
 }
 .full-screen {
@@ -943,68 +942,111 @@ tr:hover {
 }
 /* Leaderboard table ends */
 
+/* Credit page text animation starts */
+#credit-text {
+  animation: shake 2.5s linear forwards infinite;
+  font-size: 50px;
+}
+@keyframes shake {
+  5%,
+  15%,
+  25%,
+  35%,
+  55%,
+  65%,
+  75%,
+  95% {
+    transform: translateY(0.018em) rotate(0deg);
+  }
+
+  10%,
+  30%,
+  40%,
+  50%,
+  70%,
+  80%,
+  90% {
+    transform: translateY(-0.018em) rotate(0deg);
+  }
+
+  20%,
+  60% {
+    transform: translate(-0.018em, 0.018em) rotate(0deg);
+  }
+
+  45%,
+  85% {
+    transform: translate(0.018em, -0.018em) rotate(0deg);
+  }
+
+  100% {
+    filter: blur(0.007em);
+    transform: translate(0) rotate(-0.5deg);
+  }
+}
+/* Credit page text animation ends */
+
 /* Media Quries start */
 @media (max-width: 867px) {
   .screen h2 {
     font-size: 3.5em;
   }
 }
-@media(max-width:646px)
-{
-  .login-box{
+@media (max-width: 646px) {
+  .login-box {
     width: 400px;
     padding: 50px;
   }
-  .signup-box
-  {
+  .signup-box {
     width: 400px;
     padding: 40px;
   }
 }
 @media (max-width: 512px) {
-  .screen h2{
+  .screen h2 {
     font-size: 3em;
   }
-  span{
+  span {
     font-size: 1em;
   }
-  .login-icon, .signup-icon{
+  .login-icon,
+  .signup-icon {
     font-size: 0.75em;
   }
-  .login-box{
+  .login-box {
     width: 300px;
     padding: 40px;
   }
-  .signup-box
-  {
+  .signup-box {
     width: 300px;
     padding: 30px;
   }
-  element{
+  element {
     font-size: 0.95em;
   }
-  .login-box h1
-  {
+  .login-box h1 {
     font-size: 1.4em;
     margin: 0 0 30px;
   }
-  .signup-box h1
-  {
+  .signup-box h1 {
     font-size: 1.4em;
     margin: 0 0 15px;
   }
-  .signup-box form a, .signup-box .user-box label, .signup-box .user-box input, .login-box form a,.login-box .user-box input, .login-box .user-box label
-  {
+  .signup-box form a,
+  .signup-box .user-box label,
+  .signup-box .user-box input,
+  .login-box form a,
+  .login-box .user-box input,
+  .login-box .user-box label {
     font-size: 12px;
   }
-  .signup-box .user-box input{
+  .signup-box .user-box input {
     margin-bottom: 20px;
   }
-  .exit-icon{
-    top: 2rem
+  .exit-icon {
+    top: 2rem;
   }
-  .login-box form a
-  {
+  .login-box form a {
     margin-top: 10px;
   }
   .screen_nav-up,
@@ -1018,27 +1060,26 @@ tr:hover {
     display: none;
   }
 }
-@media(max-width:448px)
-{
-  .screen h2{
+@media (max-width: 448px) {
+  .screen h2 {
     font-size: 2.5em;
   }
-  span{
+  span {
     font-size: 0.8em;
   }
-  .login-icon, .signup-icon{
+  .login-icon,
+  .signup-icon {
     font-size: 0.6em;
   }
-  .login-box{
+  .login-box {
     width: 250px;
     padding: 30px;
   }
-  .signup-box
-  {
+  .signup-box {
     width: 250px;
     padding: 20px;
   }
-  element{
+  element {
     font-size: 0.8em;
   }
 }
