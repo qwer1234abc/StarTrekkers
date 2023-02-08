@@ -130,14 +130,14 @@
 .buy-btn:active {
   top: 2px;
 }
-#product-pic {
+.product-pic {
   position: absolute;
   top: 19px;
   object-fit: cover;
   height: 170px;
 }
 @media (max-width: 1053px) {
-  #product-pic {
+  .product-pic {
     height: 25vmin;
     width: 19vmin;
   }
@@ -146,7 +146,7 @@
   .card:hover .filledbar {
     width: 75px;
   }
-  #product-pic {
+  .product-pic {
     height: 25vmin;
     width: 17vmin;
   }
@@ -155,10 +155,10 @@
   .card:hover .filledbar {
     width: 75px;
   }
-  #product-pic {
+  .product-pic {
     height: 100px;
   }
-  #product-pic {
+  .product-pic {
     height: 30vmin;
     width: 15vmin;
   }
@@ -167,7 +167,7 @@
   .card:hover .filledbar {
     width: 73px;
   }
-  #product-pic {
+  .product-pic {
     height: 35vmin;
     width: 15vmin;
   }
@@ -184,13 +184,13 @@
     height: 38px;
     padding: 6px 20px;
   }
-  #product-pic {
+  .product-pic {
     height: 35vmin;
     width: 15vmin;
   }
 }
 @media (max-width: 448px) {
-  #product-pic {
+  .product-pic {
     height: 40vmin;
     width: 15vmin;
   }
