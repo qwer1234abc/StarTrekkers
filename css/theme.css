@@ -134,6 +134,12 @@
 .light-theme .signup-box a span:nth-child(4) {
   background: linear-gradient(360deg, transparent, #d30b0b);
 }
+.light-theme .checkedname,
+.light-theme .points {
+  cursor: default;
+  opacity: 10;
+  color: #d30b0b;
+}
 /* Light mode for leaderboard table  */
 .light-theme table {
   border: 1px solid transparent;
@@ -148,11 +154,6 @@
   color: #d30b0b;
   transform: scale(1.02);
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
-}
-.light-theme .checkedname {
-  cursor: default;
-  opacity: 10;
-  color: #d30b0b;
 }
 /* Light mode for shop  */
 .light-theme .card {
