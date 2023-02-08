@@ -12,7 +12,7 @@ let SignupForm = document.querySelector(".signup-box");
 let LoginExitIcon = document.querySelector(".exit-icon");
 let SignupExitIcon = document.querySelector(".exit-icon-signup");
 
-let menu = document.querySelector(".screen_zoom")
+let menu = document.querySelector(".screen_zoom");
 // add a click event listener to the login & sign up button
 loginBtn.addEventListener("click", () => {
   // only display the login form

@@ -212,3 +212,6 @@ function hitBomb(player, bomb) {
   game = new Phaser.Game(config);
   score = 0;
 }
+document.getElementById("exit-btn").addEventListener("click", function () {
+  window.location.href = "../index.html";
+});

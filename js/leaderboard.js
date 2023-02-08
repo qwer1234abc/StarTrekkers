@@ -18,7 +18,7 @@ $(document).ready(function () {
       response.sort(function (a, b) {
         return a.points - b.points;
       });
-      
+
       // take the top 5 players
       let topPlayers = response.slice(0, 5);
       // insert the data into the table

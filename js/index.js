@@ -118,10 +118,9 @@ function zoomIn() {
 
 window.onmouseover = function () {
   let bgMusic = document.getElementById("bg-music");
-  bgMusic.volume = 0.05
-  bgMusic.play()
+  bgMusic.volume = 0.05;
+  bgMusic.play();
 };
-
 
 $(document).ready(function () {
   $(document).keydown(function (e) {

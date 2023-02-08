@@ -140,4 +140,8 @@ $(document).ready(function () {
     });
     displayWord();
   });
+  $("#exit-btn").click(function (e) {
+    e.preventDefault();
+    window.location.href = "../index.html";
+  });
 });

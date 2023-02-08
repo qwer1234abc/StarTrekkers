@@ -17,6 +17,24 @@ body {
   text-transform: uppercase;
   background: radial-gradient(ellipse at bottom, #162230 0%, #07080c 100%);
 }
+.Exit {
+  position: absolute;
+  top: 0;
+  left: 23px;
+  cursor: pointer;
+  opacity: 0.65;
+  color: #fff;
+  font-size: 1.5em;
+}
+.Exit:hover {
+  opacity: 1;
+}
+.exit-icon {
+  position: absolute;
+  padding-left: 5px;
+  padding-top: 2px;
+  font-size: 0.9em;
+}
 canvas {
   padding: 0;
   margin: auto;
@@ -51,13 +69,24 @@ canvas {
   font-size: 3em;
   color: rgba(129, 243, 253, 1);
 }
+@media (max-width: 1028px) {
+  canvas {
+    width: 750px;
+  }
+}
 @media (max-width: 500px) {
   #loadingAnimation {
     font-size: 2.5em;
   }
+  .Exit {
+    font-size: 1.3em;
+  }
+  .exit-icon {
+    padding-top: 5px;
+    font-size: 0.7em;
+  }
 }
-@media (max-width: 390px)
-{
+@media (max-width: 390px) {
   #loadingAnimation {
     font-size: 1.8em;
   }
