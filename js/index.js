@@ -7,6 +7,8 @@ let site = document.querySelectorAll(".full-screen")[0],
   nav_right = document.querySelectorAll(".js-right"),
   nav_down = document.querySelectorAll(".js-down"),
   animation = document.querySelectorAll(".js-animation"),
+  notClickableElements = document.querySelectorAll("*"),
+  clickableElement = document.querySelectorAll(".screen"),
   pos_x = 0,
   pos_y = 0;
 
@@ -97,6 +99,12 @@ function zoomOut(e) {
       screen[_x].addEventListener("click", setScreenAndZoom);
     })(x);
   }
+  notClickableElements.forEach(element => {
+    element.style.pointerEvents = "none";
+  });
+  clickableElement.forEach(element => {
+    element.style.pointerEvents = "fill";
+  });
   SignupForm.style.display = "none";
   loginForm.style.display = "none";
   oriPos();
@@ -113,6 +121,9 @@ function zoomIn() {
   for (let x = 0; x < screen.length; x++) {
     screen[x].removeEventListener("click", setScreenAndZoom);
   }
+  notClickableElements.forEach(element => {
+    element.style.pointerEvents = "fill";
+  });
   removeClass(site, "show-all");
 }
 
