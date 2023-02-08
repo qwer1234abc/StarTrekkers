@@ -257,8 +257,19 @@ header p {
   margin-left: 43%;
   margin-top: 5%;
 }
+#loadingAnimation {
+  font-family: "VT323", sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  color: rgba(129, 243, 253, 1);
+}
 /* Media queries starts */
-@media (min-width: 110px) and (max-width: 711px) {
+@media (max-width: 854px) {
+  #answerT {
+    margin: 5% 0% 0% 13% !important;
+  }
+}
+@media (max-width: 646px) {
   header h1 {
     font-size: 45px !important;
   }
@@ -288,11 +299,17 @@ header p {
   }
 
   #reset {
-    margin: 0% 27% 0% 35% !important;
+    margin: 0% 27% 0% 23% !important;
+  }
+  .Exit {
+    font-size: 23px;
+  }
+  .Restart {
+    font-size: 23px;
   }
 }
 
-@media (min-width: 508px) and (max-width: 711px) {
+@media (max-width: 512px) {
   header h1 {
     font-size: 65px !important;
   }
@@ -300,15 +317,23 @@ header p {
   header p {
     letter-spacing: 7px !important;
   }
+  .Exit {
+    font-size: 21px;
+    padding: 10px 0px;
+  }
+  .Restart {
+    font-size: 21px;
+    padding: 0 0 0 0;
+  }
 }
 
-@media (min-width: 712px) and (max-width: 910px) {
+@media (max-width: 448px) {
   #start {
-    margin-left: 40% !important;
+    margin-left: 25% !important;
   }
 
   #answerT {
-    margin: 5% 0% 0% 30% !important;
+    margin: 5% 0% 0% 13% !important;
   }
   #answerF {
     margin: 5% 0% 0% 15% !important;
@@ -317,12 +342,17 @@ header p {
     padding-left: 15px !important;
     padding-right: 15px !important;
   }
-}
-#loadingAnimation {
-  font-family: "VT323", sans-serif;
-  text-transform: uppercase;
-  font-size: 2em;
-  color: rgba(129, 243, 253, 1);
+  .Exit {
+    font-size: 19px;
+    padding: 10px 0px;
+  }
+  .Restart {
+    font-size: 19px;
+    padding: 0 0 0 0;
+  }
+  header h1 {
+    font-size: 50px !important;
+  }
 }
 @media (max-width: 500px) {
   #loadingAnimation {
