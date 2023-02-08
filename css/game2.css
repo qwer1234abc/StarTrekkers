@@ -4,6 +4,7 @@ body {
   font-size: 25px;
   background-color: #b1bed3;
   overflow-x: hidden;
+  text-transform: uppercase;
 }
 .Exit {
   position: absolute;

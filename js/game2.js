@@ -1,5 +1,7 @@
-document.getElementById("username").innerText = localStorage.getItem("username");
-document.getElementById("user-points").innerText = localStorage.getItem("points")
+document.getElementById("username").innerText =
+  localStorage.getItem("username");
+document.getElementById("user-points").innerText =
+  localStorage.getItem("points");
 var currentCategory = ["HTML", "CSS", "HTML & CSS"];
 var Questions = [
   //Store questions and answers
@@ -194,7 +196,7 @@ var copy = [].concat(Questions);
 
 // delete used question out of the copy
 function deleteUsed() {
-  if (Questions.length > 0) {
+  if (Questions.length > 1) {
     Questions.splice(Questions.indexOf(question), 1);
   } else {
     document.getElementById("answerT").style.display = "none";
@@ -209,7 +211,7 @@ function deleteUsed() {
 function answer(value) {
   deleteUsed();
   if (value === question.answer) {
-    points+= 5;
+    points += 5;
     if (points == 75) {
       document.getElementById("answerT").style.display = "none";
       document.getElementById("answerF").style.display = "none";
