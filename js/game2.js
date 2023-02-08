@@ -204,6 +204,9 @@ function deleteUsed() {
     document.getElementById("questions").style.display = "none";
     document.getElementById("looser").style.display = "";
     document.getElementById("reset").style.display = "";
+    let gainedPoints = parseInt(localStorage.getItem("points"), 10);
+    gainedPoints += points;
+    localStorage.setItem("points", gainedPoints);
   }
 }
 
@@ -218,6 +221,9 @@ function answer(value) {
       document.getElementById("questions").style.display = "none";
       document.getElementById("winner").style.display = "";
       document.getElementById("reset").style.display = "";
+      let gainedPoints = parseInt(localStorage.getItem("points"), 10);
+      gainedPoints += points;
+      localStorage.setItem("points", gainedPoints);
     }
   }
   catAndQuest();
@@ -225,9 +231,6 @@ function answer(value) {
 
 //restart the game
 function restart() {
-  let gainedPoints = parseInt(localStorage.getItem("points"), 10);
-  gainedPoints += points;
-  localStorage.setItem("points", gainedPoints);
   document.location.href = "";
 }
 
