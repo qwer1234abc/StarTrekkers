@@ -150,6 +150,10 @@
     height: 25vmin;
     width: 17vmin;
   }
+  .title {
+    word-wrap: break-word;
+    width: 90px;
+  }
 }
 @media (max-width: 646px) {
   .card:hover .filledbar {
@@ -162,6 +166,10 @@
     height: 30vmin;
     width: 15vmin;
   }
+  .title {
+    word-wrap: break-word;
+    width: 80px;
+  }
 }
 @media (max-width: 512px) {
   .card:hover .filledbar {
@@ -170,6 +178,11 @@
   .product-pic {
     height: 35vmin;
     width: 15vmin;
+  }
+  .title {
+    word-wrap: break-word;
+    width: 70px;
+    font-size: 15px;
   }
 }
 @media (max-width: 448px) {
@@ -188,10 +201,14 @@
     height: 35vmin;
     width: 15vmin;
   }
+  .title {
+    word-wrap: break-word;
+    width: 80px;
+  }
 }
-@media (max-width: 448px) {
-  .product-pic {
-    height: 40vmin;
-    width: 15vmin;
+@media (max-width: 421px) {
+  .title {
+    word-wrap: break-word;
+    width: 70px;
   }
 }
