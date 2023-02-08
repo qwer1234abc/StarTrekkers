@@ -12,7 +12,7 @@ $(document).ready(function () {
       })
       .join("");
     var expectedHash = hex;
-    var inputPassword = prompt("Please enter password:");
+    var inputPassword = prompt("Dont allow giga randoms especially the M:");
 
     if (inputPassword !== expectedHash) {
       alert("Incorrect password");
