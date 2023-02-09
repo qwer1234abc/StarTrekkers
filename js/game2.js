@@ -173,7 +173,7 @@ function catAndQuest() {
   start.style.display = "none";
   showButtons();
 
-  document.getElementById("points").innerHTML = "Points: " + points;
+  document.getElementById("points").innerHTML = "Current Points: " + points;
   document.getElementById("count").innerHTML = "Question " + ++count + " / 27";
 
   currentCategory = Questions.map(function (question) {
