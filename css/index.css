@@ -940,6 +940,24 @@ tr:hover {
   transform: scale(1.02);
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
 }
+.msg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180%;
+}
+.msg #msg-text {
+  text-transform: uppercase;
+  color: rgba(129, 243, 253, 1);
+  text-shadow: 0rem 0.1rem 1rem rgba(129, 243, 253, 0.75);
+}
+#msg-text::after {
+  display: none;
+}
+#msg-text .arrow-rotate-icon {
+  font-size: 15px;
+  padding-left: 3px;
+}
 /* Leaderboard table ends */
 
 /* Credit page text animation starts */
