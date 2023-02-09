@@ -111,7 +111,8 @@
   color: white;
   background-color: rgba(0, 0, 0, 0.75);
   border-radius: 5px;
-  border: none;
+  border: 1px solid rgba(129, 243, 253, 1);
+  box-shadow: 0 0 5px rgba(129, 243, 253, 1), 0 0 5px rgb(27, 122, 133) inset;
 }
 .buy-btn:hover {
   background-color: rgba(129, 243, 253, 1);

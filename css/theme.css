@@ -156,16 +156,6 @@
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
 }
 /* Light mode for shop  */
-.light-theme .card {
-  background-color: rgba(190, 190, 190, 0.55);
-  box-shadow: -0.5rem 0 2rem #504f4f;
-}
-.light-theme .emptybar {
-  background-color: #e5e2e2;
-}
-.light-theme .filledbar {
-  background: rgba(197, 17, 17);
-}
 .light-theme .buy-btn {
   color: #fff;
   border: 1px solid rgb(239, 79, 79);
@@ -173,7 +163,7 @@
   z-index: 1;
   max-width: 90px;
 }
-.light-theme .buy-btn:after {
-  background: rgba(197, 17, 17, 1);
+.light-theme .buy-btn:hover {
+  background-color: rgba(197, 17, 17, 1);
   box-shadow: 0 0 20px rgba(197, 17, 17, 0.5);
 }
