@@ -104,8 +104,8 @@
 }
 .buy-btn:hover {
   background-color: rgba(129, 243, 253, 1);
-  box-shadow: 0rem 0.1rem 1rem rgba(129, 243, 253, 0.75);
   transition: ease 0.6s;
+  font-weight: normal;
 }
 
 /* Media Queries starts */
