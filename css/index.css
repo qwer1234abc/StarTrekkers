@@ -992,6 +992,9 @@ tr:hover {
   .light-theme .screen h2 {
     font-size: 3.5em;
   }
+  .light-theme .screen .title {
+    font-size: 25px;
+  }
 }
 @media (max-width: 646px) {
   .login-box {
@@ -1001,6 +1004,9 @@ tr:hover {
   .signup-box {
     width: 400px;
     padding: 40px;
+  }
+  .light-theme .screen .title {
+    font-size: 15px;
   }
 }
 @media (max-width: 512px) {
