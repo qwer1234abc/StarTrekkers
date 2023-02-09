@@ -2,16 +2,19 @@ $(document).ready(function () {
   var settings = {
     async: true,
     crossDomain: true,
-    url: "https://adwaqwe-e693.restdb.io/rest/shop",
+    url: "https://awdwad-0f4c.restdb.io/rest/shop",
     method: "GET",
     headers: {
       "content-type": "application/json",
-      "x-apikey": "63e4ad12478852088da67f0d",
+      "x-apikey": "63e4faeb478852088da67f45",
       "cache-control": "no-cache",
     },
   };
 
   $.ajax(settings).done(function (response) {
+    if (response.length < 10) {
+      PostItems();
+    }
     var shopContainer = document.querySelector(".page-content");
     response.slice(0, 4).forEach(function (item, index) {
       var card = document.createElement("div");
@@ -67,11 +70,11 @@ $(document).ready(function () {
       var settings = {
         async: true,
         crossDomain: true,
-        url: `https://adwaqwe-e693.restdb.io/rest/shop/${id}`,
+        url: `https://awdwad-0f4c.restdb.io/rest/shop/${id}`,
         method: "DELETE",
         headers: {
           "content-type": "application/json",
-          "x-apikey": "63e4ad12478852088da67f0d",
+          "x-apikey": "63e4faeb478852088da67f45",
           "cache-control": "no-cache",
         },
       };
@@ -82,4 +85,58 @@ $(document).ready(function () {
       button.prop("disabled", false);
     }
   });
+
+  function PostItems() {
+    fetch("https://fakestoreapi.com/products")
+      .then((response) => response.json())
+      .then((json) => {
+        if (Array.isArray(json)) {
+          json.forEach((item) => {
+            var jsondata = {
+              name: item.title,
+              price: item.price,
+              image: item.image,
+            };
+            var settings = {
+              async: true,
+              crossDomain: true,
+              url: "https://awdwad-0f4c.restdb.io/rest/shop",
+              method: "POST",
+              headers: {
+                "content-type": "application/json",
+                "x-apikey": "63e4faeb478852088da67f45",
+                "cache-control": "no-cache",
+              },
+              processData: false,
+              data: JSON.stringify(jsondata),
+            };
+            $.ajax(settings).done(function (response) {
+              console.log(response);
+            });
+          });
+        } else {
+          var jsondata = {
+            name: json.title,
+            price: json.price,
+            image: json.image,
+          };
+          var settings = {
+            async: true,
+            crossDomain: true,
+            url: "https://awdwad-0f4c.restdb.io/rest/shop",
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+              "x-apikey": "63e4faeb478852088da67f45",
+              "cache-control": "no-cache",
+            },
+            processData: false,
+            data: JSON.stringify(jsondata),
+          };
+          $.ajax(settings).done(function (response) {
+            console.log(response);
+          });
+        }
+      });
+  }
 });

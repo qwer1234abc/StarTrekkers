@@ -15,7 +15,6 @@ var config = {
     update: update,
   },
 };
-const APIKEY = "63d08564a95709597409cf2d";
 var player;
 var stars;
 var bombs;
