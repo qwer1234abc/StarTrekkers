@@ -170,3 +170,29 @@
   color: #d30b0b;
   text-shadow: 0rem 0.1rem 1rem rgba(233, 39, 39, 0.75);
 }
+.light-theme .Exit {
+  color: #000;
+}
+.light-theme .figure-container {
+  stroke: #d30b0b;
+}
+.light-theme .letter {
+  border-bottom: 3px solid #d30b0b;
+}
+.light-theme .popup button {
+  color: #d30b0b;
+}
+.light-theme #loadingAnimation {
+  color: #d30b0b;
+}
+.light-theme #whole-container h1,
+.light-theme #whole-container h3,
+.light-theme #whole-container #game-info,
+.light-theme .letter,
+.light-theme .notification-container p,
+.light-theme #final-message,
+.light-theme #wrong-letters,
+.light-theme #whole-container #username,
+.light-theme #whole-container #user-points {
+  color: #000;
+}
