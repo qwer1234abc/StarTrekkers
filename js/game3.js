@@ -145,3 +145,8 @@ $(document).ready(function () {
     window.location.href = "../index.html";
   });
 });
+
+//Background Audio
+window.onmouseover = function () {
+  document.getElementById("game3-music").play();
+};
