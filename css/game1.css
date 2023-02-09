@@ -51,8 +51,6 @@ canvas {
 }
 .game-container {
   position: absolute;
-  top: 50;
-  right: 50;
 }
 .points-display {
   position: absolute;
