@@ -8,9 +8,9 @@
 
 Welcome to Star Trekkers, an ultimate destination and platform for fans that are interested and fascinated about sci-fi which is very much related to our webpage theme. Our webpage offers a wide range of features that cater to the needs of every Star Trek fan out there. With three exciting games, players can experience from adventurous 'Stars Collector' game which requires to collect as many stars as possible to earn points. Followed by a game called 'Brain Busters' where players can experience the thrill of a challenging, yet entertaining quiz game that tests your patience and strategic thinking. Last but not least, a game of 'Hangman' which is a word guessing game where players attempt to guess a word by guessing letters one at a time in order to earn points.
 
-In addition to the games, the platform also offer a social page where players can connect with other fans and share their experiences. Whether you're looking for tips and tricks or just want to chat with other fans, our social page is the perfect place to connect with like-minded individuals. Additionally, we have an inventory shop where players can purchase exclusive in-game items to enhance their gameplay experience. From extra life span or even extra XP, our shop has everything you need to take your game to the next level.
+In addition to the games, the platform also offer a social page where players can connect with other fans and share their experiences. Whether you're looking for tips and tricks or just want to chat with other fans, our social page is the perfect place to connect with like-minded individuals. Making players' game sessions even more exciting, we have a shop where players can purchase exclusive items with the points they've earned through playing games as this is a perfect way to reward themselves.
 
-Finally, with our unique gaming experience, players can engage in one of the games and earn rewards points. These points can then be used to climb the ranks of our leaderboard, where players can compete against each other to see who the top players in the community are. This is a great way to see how you stack up against other players and to see who the top players in the community are. Additionally, we have a mode page that enables users to switch between light and dark mode, which can be adjusted to their preferences. This allows players to fully immerse themselves in the game's environment and to enhance the overall experience.
+Finally, with our unique gaming experience, players can engage in one of the games and earn rewards points. These points can then be used to climb the ranks of our leaderboard, where players can compete against each other to see who the top players in the community are. This is a great way to see how you stack up against other players and to see who the top players in the community are. Additionally, we have a mode page that enables users to switch between light and dark mode, which can be adjusted to their own preferences. This allows players to fully immerse themselves in the game's environment and to enhance the overall experience.
 
 Overall, Star Trekker is the perfect destination for all Star Trek fans. With its wide range of features and its engaging gameplay, it offers an experience that is truly out of this world.
 
@@ -28,7 +28,7 @@ Then, we start creating a wireframe for our webpage that showcases the layout of
 
 ## Features
 
-For the features of the website it is ease to make users to understand and navigate easily. Therefore, it is seperated into few different parts. The main part which consists of three different games located in sideways at the top columns. The **`'Shop'`** which allow players to buy their desired items to enhance game experience. In addition to that, users are able to find a **`'Mode'`** page below **`'Shop'`** that unable users to change from light/dark mode base on their own peferences. Moreover, a **`'Leaderboard'`** page that shows the top ranking players. Apart from that, there is also a **`'Socials'`** page for players to keep connected with the community. Not to mention, there are multiple clickable buttons located on the side of each and every pages that allow users to easier navigate themselves to another page.
+For the features of the website it is ease to make users to understand and navigate easily. Therefore, it is seperated into few different parts. The main part which consists of three different games located horizontally at the top panels. At the home page, there is a **`'Sign in'`** and **`'Sign Up'`** buttons for users to login to their own account and resgister an account if does not have one. The **`'Shop'`** which allow players to buy their desired items with the points they have earned from playing the games. In addition to that, users are able to find a **`'Mode'`** page below **`'Shop'`** that unable users to change from light/dark mode base on their own peferences. Moreover, a **`'Leaderboard'`** page that shows the top ranking players. Apart from that, there is also a **`'Socials'`** page for players to keep connected with the community. Not to mention, there are multiple clickable buttons located on the side of each and every pages that allow users to easier navigate themselves to another page.
 
 ### Existing Features
 
@@ -44,13 +44,17 @@ Brain Busters is a thrilling game of true or false that tests players' knowledge
 
 Hangman is a classic word guessing game where players attempt to guess a word by guessing letters one at a time. The word is represented by dashes, with each correctly guessed letter filling in the corresponding dash. Incorrect guesses result in a part of a "Hangman" drawing being added, with the game ending when the drawing of a 'Hangman' is completed. The goal is to correctly guess the word before the hangman is fully drawn. 500 Points are awarded for each correct guessed word with given hint for the 3rd and 5th letter. And players are only given 6 tries in order to guess the word correctly once it is used players are considered loose and required to restart the game.
 
-- `Shop - allows users to choose from a variety of different items to enhance game experiences.`
+- `Shop - allows users to choose from a variety of different items from the points that they've earned.`
 
 - `Mode - changes theme color from light/dark mode base on users peferences.`
 
 - `Leaderboard - display top ranking players'`.
 
 - `Socials - list of socials platforms that allow players to join the community and keep connected with other players.`
+
+- `Sign In - for users to sign in to their own account to see their total game points that they've earned.`
+
+- `Sign Up - for users to register an account if they don't not have one.`
 
 ### Features Left to Implement (DONE)
 
@@ -104,6 +108,18 @@ Hangman is a classic word guessing game where players attempt to guess a word by
 
 - The project uses [RESTDB.io](https://restdb.io/) for online storage of usernames, passwords, and game points.
 
+11. [jQuery](https://jquery.com/)
+
+- The project uses jQuery for handling events, to perform AJAX requests, and to manipulate several HTML documents.
+
+11. [Google Fonts](https://fonts.google.com/)
+
+- The project uses Google fonts for multiple different fonts that is used for the webpage.
+
+11. [Dopely Colors](https://colors.dopely.top/)
+
+- The project uses Dopely colors as a references of the different color scheme that is applied aesthetically for the webpage.
+
 ## Testing
 
 **1. Mode :**
@@ -114,10 +130,6 @@ ii. A toggle button located in the center of the page that allow users to swtich
 
 iii. Try to switch and play with the toggle button to see the differences between light/dark mode.
 
-The project looks very much the same on both laptop browsers and on mobile screen, in fact it may be a little smaller on mobile view.
-
-One interesting bugs or problems we've discovered during our testing is that our background star animations tend to goes off without looping continuonsly. But, we've found out which sections that causes this issue and had successfully solved it.
-
 **2. Save Theme Color :**
 
 i. Switch the theme color on the mode page to either mode (light/dark).
@@ -126,15 +138,25 @@ ii. Refresh the page as it will stay as the previous theme color as the user cho
 
 We uses **`'LocalStorage.SetItem()'`** to store the previous selected theme and **`'LocalStorage.GetItem()'`** to get the previous theme and load it on page start.
 
-One interesting issue we encounter is that, after switching the theme from dark mode to light mode the color of the mode toggle button doesn't change along. However, after using local storage to set the selected theme and to get the previous selected theme by getting item we fixed the issue.
-
-**2. Save Users information :**
+**3. Save Users information :**
 
 i. Users could either sign in or sign up an account and the name of the registered user will then display on the screen as a welcome message.
 
 ii. After refreshing the page the sign in user will still saved at the current page.
 
 We uses **`'LocalStorage.SetItem()'`** to store the previous sign in user and use the local storage to obtain the data upon page load.
+
+**4. Points Deduction After Purchasing Items :**
+
+i. Hover over the buy button to see the stated points amount.
+
+ii. Press the buy button if have sufficient points for buying particular items and it will show an alert message showing insufficient amount if users do not have enough points.
+
+ii. After purchasing the selected items and with alert message of showing items being sent to mailbox, users points wull be deducted base on the purchased amount.
+
+The project is fully responsive in all sizes and across different browsers after testing it with [Google Chrome](https://www.google.com/) & [Microsoft Edge](https://www.microsoft.com/en-us/edge?exp=e511&form=MA13FJ). And the overall appearance of the webpage looks very much the same on both laptop and on mobile screen, in fact it may be a little smaller on mobile view.
+
+Throughout the way of this project, we've faced different bugs and challenging problems that requires us to fix. One of interesting bugs or problems we've discovered during our testing is that our background star animations tend to goes off without looping continuonsly. But, we've found out which sections that causes this issue and had successfully solved it. Apart from this, we also encountered that after switching the theme from dark mode to light mode the color of the mode toggle button doesn't change along. However, after using local storage to set the selected theme and to get the previous selected theme by getting item we fixed the issue. Additionally,
 
 ## Credits
 
@@ -144,11 +166,9 @@ We uses **`'LocalStorage.SetItem()'`** to store the previous sign in user and us
 
 [Kelvin Beh Jueen Hao](https://github.com/qwer1234abc)
 
-### Content
-
 ### Media
 
-- The audio used in this project were obtained from [Aristeo Lugo - Youtube](https://www.youtube.com/watch?v=dyUOT_5JVjE) & [NoCopyrightSounds - Youtube](https://www.youtube.com/watch?v=HV7mLcsUp5U).
+- The audio used in this project were obtained from [NoCopyrightSounds - Youtube](https://www.youtube.com/watch?v=HV7mLcsUp5U) for theme song & [Royalty Free Artists - Youtube](https://www.youtube.com/watch?v=zXKcybzvj7Y) for game 1 & [Aristeo Lugo - Youtube](https://www.youtube.com/watch?v=dyUOT_5JVjE) for game 2 & [Kanda - Youtube](https://www.youtube.com/watch?v=yEYJQqyvmrk) for game 3.
 
 - The icons used in this project were obtained from [Flaticon](https://www.flaticon.com/) & [Font Awesome](https://fontawesome.com/).
 
