@@ -1013,6 +1013,12 @@ tr:hover {
   .light-theme .screen .title {
     font-size: 25px;
   }
+  #msg-text {
+    font-size: 16px;
+  }
+  #msg-text .arrow-rotate-icon {
+    font-size: 13px;
+  }
 }
 @media (max-width: 646px) {
   .login-box {
@@ -1025,6 +1031,16 @@ tr:hover {
   }
   .light-theme .screen .title {
     font-size: 15px;
+  }
+  #msg-text {
+    font-size: 14px;
+    word-wrap: break-word;
+    width: 340px;
+    text-align: center;
+    display: block;
+  }
+  #msg-text .arrow-rotate-icon {
+    font-size: 11px;
   }
 }
 @media (max-width: 512px) {
@@ -1119,6 +1135,16 @@ tr:hover {
     line-height: 51px;
     font-size: 24px;
     margin: 0 7px;
+  }
+  #msg-text {
+    font-size: 14px;
+    word-wrap: break-word;
+    width: 300px;
+    text-align: center;
+    display: block;
+  }
+  #msg-text .arrow-rotate-icon {
+    font-size: 11px;
   }
 }
 @media (max-width: 448px) {

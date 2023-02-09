@@ -166,3 +166,7 @@
 .light-theme .buy-btn:hover {
   background-color: rgba(197, 17, 17, 1);
 }
+.light-theme .msg #msg-text {
+  color: #d30b0b;
+  text-shadow: 0rem 0.1rem 1rem rgba(233, 39, 39, 0.75);
+}
