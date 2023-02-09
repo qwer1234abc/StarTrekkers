@@ -23,7 +23,6 @@ body {
 }
 .Restart {
   position: absolute;
-  top: 15;
   left: 23px;
   cursor: pointer;
   opacity: 0.65;
