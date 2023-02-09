@@ -99,10 +99,10 @@ function zoomOut(e) {
       screen[_x].addEventListener("click", setScreenAndZoom);
     })(x);
   }
-  notClickableElements.forEach(element => {
+  notClickableElements.forEach((element) => {
     element.style.pointerEvents = "none";
   });
-  clickableElement.forEach(element => {
+  clickableElement.forEach((element) => {
     element.style.pointerEvents = "fill";
   });
   SignupForm.style.display = "none";
@@ -121,7 +121,7 @@ function zoomIn() {
   for (let x = 0; x < screen.length; x++) {
     screen[x].removeEventListener("click", setScreenAndZoom);
   }
-  notClickableElements.forEach(element => {
+  notClickableElements.forEach((element) => {
     element.style.pointerEvents = "fill";
   });
   removeClass(site, "show-all");
@@ -154,4 +154,9 @@ $(document).ready(function () {
       oriPos();
     }
   });
+});
+
+//Page reload
+document.getElementById("msg-text").addEventListener("click", function () {
+  location.reload();
 });
