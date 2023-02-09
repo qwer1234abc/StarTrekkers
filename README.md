@@ -10,7 +10,7 @@ Welcome to Star Trekkers, an ultimate destination and platform for fans that are
 
 In addition to the games, the platform also offer a social page where players can connect with other fans and share their experiences. Whether you're looking for tips and tricks or just want to chat with other fans, our social page is the perfect place to connect with like-minded individuals. Additionally, we have an inventory shop where players can purchase exclusive in-game items to enhance their gameplay experience. From extra life span or even extra XP, our shop has everything you need to take your game to the next level.
 
-Finally, with our unique gaming experience, players can engage in one of the games and earn rewards points. These points can then be used to climb the ranks of our leaderboard, where players can compete against each other to see who the top players in the community are. This is a great way to see how you stack up against other players and to see who the top players in the community are. Additionally, we have a mode page that enables users to switch between day and night mode, which can be adjusted to their preferences. This allows players to fully immerse themselves in the game's environment and to enhance the overall experience.
+Finally, with our unique gaming experience, players can engage in one of the games and earn rewards points. These points can then be used to climb the ranks of our leaderboard, where players can compete against each other to see who the top players in the community are. This is a great way to see how you stack up against other players and to see who the top players in the community are. Additionally, we have a mode page that enables users to switch between light and dark mode, which can be adjusted to their preferences. This allows players to fully immerse themselves in the game's environment and to enhance the overall experience.
 
 Overall, Star Trekker is the perfect destination for all Star Trek fans. With its wide range of features and its engaging gameplay, it offers an experience that is truly out of this world.
 
@@ -28,7 +28,7 @@ Then, we start creating a wireframe for our webpage that showcases the layout of
 
 ## Features
 
-For the features of the website it is ease to make users to understand and navigate easily. Therefore, it is seperated into few different parts. The main part which consists of three different games located in sideways at the top columns. The **`'Shop'`** which allow players to buy their desired items to enhance game experience. In addition to that, users are able to find a **`'Mode'`** page below **`'Shop'`** that unable users to change from day/night mode base on their own peferences. Moreover, a **`'Leaderboard'`** page that shows the top ranking players. Apart from that, there is also a **`'Socials'`** page for players to keep connected with the community. Not to mention, there are multiple clickable buttons located on the side of each and every pages that allow users to easier navigate themselves to another page.
+For the features of the website it is ease to make users to understand and navigate easily. Therefore, it is seperated into few different parts. The main part which consists of three different games located in sideways at the top columns. The **`'Shop'`** which allow players to buy their desired items to enhance game experience. In addition to that, users are able to find a **`'Mode'`** page below **`'Shop'`** that unable users to change from light/dark mode base on their own peferences. Moreover, a **`'Leaderboard'`** page that shows the top ranking players. Apart from that, there is also a **`'Socials'`** page for players to keep connected with the community. Not to mention, there are multiple clickable buttons located on the side of each and every pages that allow users to easier navigate themselves to another page.
 
 ### Existing Features
 
@@ -46,13 +46,13 @@ Hangman is a classic word guessing game where players attempt to guess a word by
 
 - `Shop - allows users to choose from a variety of different items to enhance game experiences.`
 
-- `Mode - changes theme color from day/night mode base on users peferences.`
+- `Mode - changes theme color from light/dark mode base on users peferences.`
 
 - `Leaderboard - display top ranking players'`.
 
 - `Socials - list of socials platforms that allow players to join the community and keep connected with other players.`
 
-### Features Left to Implement
+### Features Left to Implement (DONE)
 
 - `Login function - allow users to key in login info and collect key in information using API.`
 
@@ -98,7 +98,7 @@ Hangman is a classic word guessing game where players attempt to guess a word by
 
 9. [APIs](https://random-word-api.herokuapp.com/home)
 
-- The project uses multiple APIs for games which inlcude [Random Word API](https://random-word-api.herokuapp.com/home) for 'Stars Collector' and [Phaser.io](https://phaser.io/) for 'Hangman'.
+- The project uses multiple APIs for games which inlcude [Random Word API](https://random-word-api.herokuapp.com/home) for 'Stars Collector' and [Phaser.io](https://phaser.io/) for 'Hangman' and [Fakestoreapi](https://fakestoreapi.com/) to **`'FETCH'`** the data from the API and **`'PUT'`** into the RESTDB database.
 
 10. [RESTDB.io](https://restdb.io/)
 
@@ -110,13 +110,31 @@ Hangman is a classic word guessing game where players attempt to guess a word by
 
 i. Click on the 'Mode' panel located at the bottom left side.
 
-ii. A toggle button located in the center of the page that allow users to swtich between day/night mode depends on their peferences.
+ii. A toggle button located in the center of the page that allow users to swtich between light/dark mode depends on their peferences.
 
-iii. Try to switch and play with the toggle button to see the differences between day/night mode.
+iii. Try to switch and play with the toggle button to see the differences between light/dark mode.
 
 The project looks very much the same on both laptop browsers and on mobile screen, in fact it may be a little smaller on mobile view.
 
 One interesting bugs or problems we've discovered during our testing is that our background star animations tend to goes off without looping continuonsly. But, we've found out which sections that causes this issue and had successfully solved it.
+
+**2. Save Theme Color :**
+
+i. Switch the theme color on the mode page to either mode (light/dark).
+
+ii. Refresh the page as it will stay as the previous theme color as the user chose.
+
+We uses **`'LocalStorage.SetItem()'`** to store the previous selected theme and **`'LocalStorage.GetItem()'`** to get the previous theme and load it on page start.
+
+One interesting issue we encounter is that, after switching the theme from dark mode to light mode the color of the mode toggle button doesn't change along. However, after using local storage to set the selected theme and to get the previous selected theme by getting item we fixed the issue.
+
+**2. Save Users information :**
+
+i. Users could either sign in or sign up an account and the name of the registered user will then display on the screen as a welcome message.
+
+ii. After refreshing the page the sign in user will still saved at the current page.
+
+We uses **`'LocalStorage.SetItem()'`** to store the previous sign in user and use the local storage to obtain the data upon page load.
 
 ## Credits
 
@@ -139,3 +157,5 @@ One interesting bugs or problems we've discovered during our testing is that our
 - The APIs used for 'Stars Collector' and 'Hangman' games were obtained from [Random Word API](https://random-word-api.herokuapp.com/home) & [Phaser.io](https://phaser.io/).
 
 ### Acknowledgements
+
+We received inspiration for our background from [sarazond](https://codepen.io/sarazond/pens/showcase).
