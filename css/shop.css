@@ -158,13 +158,16 @@
   }
 }
 @media (max-width: 448px) {
+  .screen #shop {
+    top: 31%;
+  }
   .page-content {
     grid-template-columns: none;
     grid-template-columns: none;
   }
   .card {
     left: 5%;
-    top: 37vh;
+    top: 34vh;
     height: 100px;
   }
   .buy-btn {
