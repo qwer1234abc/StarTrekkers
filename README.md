@@ -1,8 +1,10 @@
 # ID Assignment 2: Star Trekkers :sparkles:
 
-[Koo Bing En](https://github.com/bingenk) :trollface::trollface:
-
 [Beh Jueen Hao Kelvin](https://github.com/qwer1234abc)
+
+[Koo Bing En](https://github.com/bingenk) :trollface::trollface::trollface::trollface::trollface::trollface::trollface::trollface:
+
+[Link for github-pages](https://qwer1234abc.github.io/ID-Assignment-2/)
 
 ### Introduction:
 
