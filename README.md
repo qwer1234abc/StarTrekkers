@@ -14,7 +14,7 @@ Finally, with our unique gaming experience, players can engage in one of the gam
 
 Overall, Star Trekker is the perfect destination for all Star Trek fans. With its wide range of features and its engaging gameplay, it offers an experience that is truly out of this world.
 
-## Design Process
+## Design Process :arrow_down:
 
 As mentioned earlier, the website target players and users that are interested in sci-fi franchise. And the website featured a variety of exciting features that allow users to explore each and every.
 
@@ -26,11 +26,11 @@ Then, we start creating a wireframe for our webpage that showcases the layout of
 
 [Link for wireframe](https://xd.adobe.com/view/7a432638-81c2-4eba-8f9d-4f1cca3d2e4c-2f10/)
 
-## Features
+## Features :arrow_down:
 
 For the features of the website it is ease to make users to understand and navigate easily. Therefore, it is seperated into few different parts. The main part which consists of three different games located horizontally at the top panels. At the home page, there is a **`'Sign in'`** and **`'Sign Up'`** buttons for users to login to their own account and resgister an account if does not have one. The **`'Shop'`** which allow players to buy their desired items with the points they have earned from playing the games. In addition to that, users are able to find a **`'Mode'`** page below **`'Shop'`** that unable users to change from light/dark mode base on their own peferences. Moreover, a **`'Leaderboard'`** page that shows the top ranking players. Apart from that, there is also a **`'Socials'`** page for players to keep connected with the community. Not to mention, there are multiple clickable buttons located on the side of each and every pages that allow users to easier navigate themselves to another page.
 
-### Existing Features
+### Existing Features :arrow_down:
 
 #### Game 1: Stars Collector
 
@@ -66,7 +66,7 @@ Hangman is a classic word guessing game where players attempt to guess a word by
 
 [Link for github-pages](https://qwer1234abc.github.io/ID-Assignment-2/)
 
-## Technologies Used
+## Technologies Used :arrow_down:
 
 1. [HTML](https://html.com/)
 
@@ -120,7 +120,7 @@ Hangman is a classic word guessing game where players attempt to guess a word by
 
 - The project uses Dopely colors as a references of the different color scheme that is applied aesthetically for the webpage.
 
-## Testing
+## Testing :arrow_down:
 
 **1. Mode :**
 
@@ -158,7 +158,7 @@ The project is fully responsive in all sizes and across different browsers after
 
 Throughout the way of this project, we've faced different bugs and challenging problems that requires us to fix. One of interesting bugs or problems we've discovered during our testing is that our background star animations tend to goes off without looping continuonsly. But, we've found out which sections that causes this issue and had successfully solved it. Apart from this, we also encountered that after switching the theme from dark mode to light mode the color of the mode toggle button doesn't change along. However, after using local storage to set the selected theme and to get the previous selected theme by getting item we fixed the issue. Additionally,
 
-## Credits
+## Credits :arrow_down:
 
 ### Contributors
 
