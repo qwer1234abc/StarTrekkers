@@ -28,11 +28,11 @@ $(document).ready(function () {
               var settings = {
                 async: true,
                 crossDomain: true,
-                url: "https://testa-6711.restdb.io/rest/shop",
+                url: "https://adwaqwe-e693.restdb.io/rest/shop",
                 method: "POST",
                 headers: {
                   "content-type": "application/json",
-                  "x-apikey": "63e29704478852088da67e89",
+                  "x-apikey": "63e4ad12478852088da67f0d",
                   "cache-control": "no-cache",
                 },
                 processData: false,
@@ -51,11 +51,11 @@ $(document).ready(function () {
             var settings = {
               async: true,
               crossDomain: true,
-              url: "https://testa-6711.restdb.io/rest/shop",
+              url: "https://adwaqwe-e693.restdb.io/rest/shop",
               method: "POST",
               headers: {
                 "content-type": "application/json",
-                "x-apikey": "63e29704478852088da67e89",
+                "x-apikey": "63e4ad12478852088da67f0d",
                 "cache-control": "no-cache",
               },
               processData: false,
