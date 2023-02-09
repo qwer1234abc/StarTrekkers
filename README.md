@@ -1,4 +1,4 @@
-#[ID Assignment 2: Star Trekkers](https://qwer1234abc.github.io/ID-Assignment-2/) :sparkles:
+# ID Assignment 2: Star Trekkers :sparkles:
 
 [Koo Bing En](https://github.com/bingenk) :trollface::trollface:
 
