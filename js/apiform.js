@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  const APIKEY = "63d08564a95709597409cf2d";
+  const APIKEY = "63e4fe5d478852088da67f49";
   $(".afterCheckIn").hide();
 
   let loginBtn = $(".user-login"),
@@ -24,7 +24,7 @@ $(document).ready(function () {
       var settings = {
         async: true,
         crossDomain: true,
-        url: `https://restdb-efce.restdb.io/rest/players?q={"username":"${localStorage.getItem(
+        url: `https://player-7ddd.restdb.io/rest/player?q={"username":"${localStorage.getItem(
           "username"
         )}"}`,
         method: "GET",
@@ -45,7 +45,7 @@ $(document).ready(function () {
         var settings = {
           async: true,
           crossDomain: true,
-          url: `https://restdb-efce.restdb.io/rest/players/${localStorage.getItem(
+          url: `https://player-7ddd.restdb.io/rest/player/${localStorage.getItem(
             "id"
           )}`,
           method: "PUT",
@@ -117,7 +117,7 @@ $(document).ready(function () {
       var settings = {
         async: true,
         crossDomain: true,
-        url: `https://restdb-efce.restdb.io/rest/players?q={"username":"${login_username}"}`,
+        url: `https://player-7ddd.restdb.io/rest/player?q={"username":"${login_username}"}`,
         method: "GET",
         headers: {
           "content-type": "application/json",
@@ -178,7 +178,7 @@ $(document).ready(function () {
         var settings = {
           async: true,
           crossDomain: true,
-          url: `https://restdb-efce.restdb.io/rest/players?q={"username":"${player_username}"}`,
+          url: `https://player-7ddd.restdb.io/rest/player?q={"username":"${player_username}"}`,
           method: "GET",
           headers: {
             "content-type": "application/json",
@@ -198,7 +198,7 @@ $(document).ready(function () {
             let settings = {
               async: true,
               crossDomain: true,
-              url: "https://restdb-efce.restdb.io/rest/players",
+              url: "https://player-7ddd.restdb.io/rest/player",
               method: "POST",
               headers: {
                 "content-type": "application/json",
@@ -223,7 +223,7 @@ $(document).ready(function () {
               var settings = {
                 async: true,
                 crossDomain: true,
-                url: `https://restdb-efce.restdb.io/rest/players?q={"username":"${player_username}"}`,
+                url: `https://player-7ddd.restdb.io/rest/player?q={"username":"${player_username}"}`,
                 method: "GET",
                 headers: {
                   "content-type": "application/json",

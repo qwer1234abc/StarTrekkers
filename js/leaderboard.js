@@ -1,10 +1,10 @@
 $(document).ready(function () {
-  const APIKEY = "63d08564a95709597409cf2d";
+  const APIKEY = "63e4fe5d478852088da67f49";
   function getLeaderBoards() {
     var settings = {
       async: true,
       crossDomain: true,
-      url: "https://restdb-efce.restdb.io/rest/players",
+      url: "https://player-7ddd.restdb.io/rest/player",
       method: "GET",
       headers: {
         "content-type": "application/json",
