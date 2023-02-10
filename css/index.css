@@ -948,9 +948,9 @@ tr:hover {
 }
 .msg {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  height: 180%;
+  height: 90vh;
 }
 .msg #msg-text {
   text-transform: uppercase;
