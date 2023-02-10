@@ -2,12 +2,16 @@
 
 #### **Contributors :**
 
-[Koo Bing En](https://github.com/bingenk)
-
 [Beh Jueen Hao Kelvin](https://github.com/qwer1234abc)
+- In charge of mostly backend
+- Implementation of API, validations, LocalStorage, Game 1 & Game 3 and some CSS & HTML.
+
+[Koo Bing En](https://github.com/bingenk)
+- In charge of mostly frontend
+- Implementations of website design, light mode, validations, Game 2 and some API.
 
 #### **Here is the link to our [github-pages](https://qwer1234abc.github.io/ID-Assignment-2/).**
-
+#### **Here is the link to our [Demo Video](ID_Assignment2_Demo.mp4).**
 ## Introduction:
 
 Welcome to Star Trekkers, an ultimate destination and platform for fans that are interested and fascinated about sci-fi which is very much related to our webpage theme. Our webpage offers a wide range of features that cater to the needs of every Star Trek fan out there. With three exciting games, players can experience from adventurous 'Stars Collector' game which requires to collect as many stars as possible to earn points. Followed by a game called 'Brain Busters' where players can experience the thrill of a challenging, yet entertaining quiz game that tests your patience and strategic thinking. Last but not least, a game of 'Hangman' which is a word guessing game where players attempt to guess a word by guessing letters one at a time in order to earn points.
@@ -32,7 +36,7 @@ Then, we start creating a wireframe for our webpage that showcases the layout of
 
 ## Features :video_game:
 
-For the features of the website it is ease to make users to understand and navigate easily. Therefore, it is seperated into few different parts. The main part which consists of three different games located horizontally at the top panels. At the home page, there is a **`'Sign in'`** and **`'Sign Up'`** buttons for users to login to their own account and resgister an account if does not have one. The **`'Shop'`** which allow players to buy their desired items with the points they have earned from playing the games. In addition to that, users are able to find a **`'Mode'`** page below **`'Shop'`** that unable users to change from light/dark mode base on their own peferences. Moreover, a **`'Leaderboard'`** page that shows the top ranking players. Apart from that, there is also a **`'Socials'`** page for players to keep connected with the community. Not to mention, there are multiple clickable buttons located on the side of each and every pages that allow users to easier navigate themselves to another page.
+For the features of the website it is ease to make users to understand and navigate easily. Therefore, it is seperated into few different parts. The main part which consists of three different games located horizontally at the top panels. At the home page, there is a **`'Sign in'`** and **`'Sign Up'`** buttons for users to login to their own account and resgister an account if does not have one. The **`'Shop'`** which allow players to buy their desired items with the points they have earned from playing the games. Moreover, the shop is also refilled up with items once it reaches less than 10 items. In addition to that, users are able to find a **`'Mode'`** page below **`'Shop'`** that unable users to change from light/dark mode base on their own peferences. Moreover, a **`'Leaderboard'`** page that shows the top ranking players. Apart from that, there is also a **`'Socials'`** page for players to keep connected with the community. Not to mention, there are multiple clickable buttons located on the side of each and every pages that allow users to easier navigate themselves to another page.
 
 ### Existing Features
 
@@ -46,13 +50,13 @@ Brain Busters is a thrilling game of true or false that tests players' knowledge
 
 #### Game 3: Hangman
 
-Hangman is a classic word guessing game where players attempt to guess a word by guessing letters one at a time. The word is represented by dashes, with each correctly guessed letter filling in the corresponding dash. Incorrect guesses result in a part of a "Hangman" drawing being added, with the game ending when the drawing of a 'Hangman' is completed. The goal is to correctly guess the word before the hangman is fully drawn. 500 Points are awarded for each correct guessed word with given hint for the 3rd and 5th letter. And players are only given 6 tries in order to guess the word correctly once it is used players are considered loose and required to restart the game.
+Hangman is a classic word guessing game where players attempt to guess a word by guessing letters one at a time. The word is represented by dashes, with each correctly guessed letter filling in the corresponding dash. Incorrect guesses result in a part of a "Hangman" drawing being added, with the game ending when the drawing of a 'Hangman' is completed. The goal is to correctly guess the word before the hangman is fully drawn. 500 Points are awarded for each correct guessed word with given hint for the 3rd and 5th letter. And players are only given 6 tries in order to guess the word correctly once it is used players are considered loose and required to restart the game. The word chosen is fetched from [Random Word API](https://random-word-api.herokuapp.com/home).
 
 - `Shop - allows users to choose from a variety of different items from the points that they've earned.`
 
 - `Mode - changes theme color from light/dark mode base on users peferences.`
 
-- `Leaderboard - display top ranking players'`.
+- `Leaderboard - display top ranking players.'`
 
 - `Socials - list of socials platforms that allow players to join the community and keep connected with other players.`
 
@@ -60,15 +64,9 @@ Hangman is a classic word guessing game where players attempt to guess a word by
 
 - `Sign Up - for users to register an account if they don't not have one.`
 
-### Features Left to Implement (DONE)
-
 - `Login function - allow users to key in login info and collect key in information using API.`
 
 - `Games - exciting games for users play to get reward points.`
-
-##### **Here is the link to our github-pages:**
-
-[Link for github-pages](https://qwer1234abc.github.io/ID-Assignment-2/)
 
 ## Technologies Used :computer:
 
@@ -124,6 +122,10 @@ Hangman is a classic word guessing game where players attempt to guess a word by
 
 - The project uses Dopely colors as a references of the different color scheme that is applied aesthetically for the webpage.
 
+14. [Microsoft Teams](https://www.microsoft.com/en-sg/microsoft-teams/group-chat-software)
+
+- Demo recording is recorded using Microsoft Teams.
+
 ## Testing :heavy_check_mark:
 
 **1. Mode :**
@@ -140,39 +142,59 @@ i. Switch the theme color on the mode page to either mode (light/dark).
 
 ii. Refresh the page as it will stay as the previous theme color as the user chose.
 
-We uses **`'LocalStorage.SetItem()'`** to store the previous selected theme and **`'LocalStorage.GetItem()'`** to get the previous theme and load it on page start.
+We use **`'LocalStorage.SetItem()'`** to store the previous selected theme and **`'LocalStorage.GetItem()'`** to get the previous theme and load it on page start.
 
-**3. Save Users information :**
+**3. Form input validations :**
+
+We have validated both our sign in and sign up form. For sign in, it checks that user have entered all fields, afterwards check if username entered exist in the database, and finally check whether the password entered for that username is correct. For sign up, it checks that user have entered all field, then checks that password and confirm password matches, afterwards check if the username is not in the database, if all is true, sign up successful!
+
+**4. Save Users information :**
 
 i. Users could either sign in or sign up an account and the name of the registered user will then display on the screen as a welcome message.
 
 ii. After refreshing the page the sign in user will still saved at the current page.
 
-We uses **`'LocalStorage.SetItem()'`** to store the previous sign in user and use the local storage to obtain the data upon page load.
+We use **`'LocalStorage.SetItem()'`** to store the previous sign in user and use the local storage to obtain the data upon page load.
 
-**4. Points Deduction After Purchasing Items :**
+**5. Shop validation :**
+
+i. Users click on the button when they are not signed in, alert would appear telling them to sign in first.
+
+ii. If user is signed in and buys item that exceeds there own number of points, alert would tell them that they have insufficient points
+
+iii. Else proceed for checking out.
+
+**6. Points Deduction After Purchasing Items :**
 
 i. Hover over the buy button to see the stated points amount.
 
 ii. Press the buy button if have sufficient points for buying particular items and it will show an alert message showing insufficient amount if users do not have enough points.
 
-ii. After purchasing the selected items and with alert message of showing items being sent to mailbox, users points wull be deducted base on the purchased amount.
+iii. After purchasing the selected items and with alert message of showing items being sent to mailbox, users points wull be deducted base on the purchased amount.
 
-**5. RESTDB request timeout:**
+**7. Auto refill of shop items:**
+
+i. Check for number of items in the shop.
+
+ii. If number of items is lower than 10, fill up the shop by fetching from the [Fakestoreapi](https://fakestoreapi.com/) and PUT it into the RESTDB database.
+
+**8. RESTDB request timeout:**
 
 i. When too many request are used, RESTDB will eventually timeout and require waiting of at least half a day. :exclamation:
 
+**9. Website Compatibility:**
 The project is fully responsive in all sizes and across different browsers after testing it with [Google Chrome](https://www.google.com/) & [Microsoft Edge](https://www.microsoft.com/en-us/edge?exp=e511&form=MA13FJ). And the overall appearance of the webpage looks very much the same on both laptop and on mobile screen, in fact it may be a little smaller on mobile view.
 
+**10. Bugs & Fixes:**
 Throughout the way of this project, we've faced different bugs and challenging problems that requires us to fix. One of interesting bugs or problems we've discovered during our testing is that our background star animations tend to goes off without looping continuonsly. But, we've found out which sections that causes this issue and had successfully solved it. Apart from this, we also encountered that after switching the theme from dark mode to light mode the color of the mode toggle button doesn't change along. However, after using local storage to set the selected theme and to get the previous selected theme by getting item we fixed the issue. Additionally,
 
 ## Credits :ballot_box_with_check:
 
 ### Contributors
 
-[Koo Bing En](https://github.com/bingenk)
-
 [Kelvin Beh Jueen Hao](https://github.com/qwer1234abc)
+
+[Koo Bing En](https://github.com/bingenk)
 
 ### Media
 
@@ -187,3 +209,5 @@ Throughout the way of this project, we've faced different bugs and challenging p
 ### Acknowledgements
 
 We received inspiration for our background from [sarazond](https://codepen.io/sarazond/pens/showcase).
+
+Hangman game received inspiration from [NinjasHub](https://www.youtube.com/watch?v=fsK9pydvDvY&t=1350s&ab_channel=NinjasHub).
