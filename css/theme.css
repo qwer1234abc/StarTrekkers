@@ -196,3 +196,9 @@
 .light-theme #whole-container #user-points {
   color: #000;
 }
+.light-theme #credit-text {
+  color: #d30b0b;
+}
+.light-theme .underscore {
+  color: #d30b0b;
+}

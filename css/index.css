@@ -18,12 +18,12 @@ body {
   text-transform: uppercase;
   background: radial-gradient(ellipse at bottom, #162230 0%, #07080c 100%);
 }
-#game_enter {
+.game_enter {
   text-decoration: none;
   color: rgba(129, 243, 253, 1);
   font-size: 28px;
 }
-#game_enter::after {
+.game_enter::after {
   display: none;
 }
 .full-screen {
@@ -75,6 +75,12 @@ span {
   right: 22px;
   display: inline-block;
   animation: crt-blink 1s infinite;
+  color: rgba(129, 243, 253, 1);
+  cursor: auto;
+}
+.underscore::after {
+  display: none;
+  cursor: auto;
 }
 h2::selection {
   color: #fff;
@@ -964,6 +970,12 @@ tr:hover {
 #credit-text {
   animation: shake 2.5s linear forwards infinite;
   font-size: 50px;
+  opacity: 1;
+  cursor: auto;
+  color: rgba(129, 243, 253, 1);
+}
+#credit-text::after {
+  display: none;
 }
 @keyframes shake {
   5%,
