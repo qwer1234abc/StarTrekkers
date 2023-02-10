@@ -116,11 +116,11 @@ Hangman is a classic word guessing game where players attempt to guess a word by
 
 - The project uses jQuery for handling events, to perform AJAX requests, and to manipulate several HTML documents.
 
-11. [Google Fonts](https://fonts.google.com/)
+12. [Google Fonts](https://fonts.google.com/)
 
 - The project uses Google fonts for multiple different fonts that is used for the webpage.
 
-11. [Dopely Colors](https://colors.dopely.top/)
+13. [Dopely Colors](https://colors.dopely.top/)
 
 - The project uses Dopely colors as a references of the different color scheme that is applied aesthetically for the webpage.
 
@@ -158,7 +158,7 @@ ii. Press the buy button if have sufficient points for buying particular items a
 
 ii. After purchasing the selected items and with alert message of showing items being sent to mailbox, users points wull be deducted base on the purchased amount.
 
-**1. RESTDB request timeout:**
+**5. RESTDB request timeout:**
 
 i. When too many request are used, RESTDB will eventually timeout and require waiting of at least half a day. :exclamation:
 
