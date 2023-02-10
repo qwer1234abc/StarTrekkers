@@ -1,14 +1,12 @@
 # ID Assignment 2: Star Trekkers :sparkles:
 
-##### **Contributors :**
+#### **Contributors :**
 
 [Koo Bing En](https://github.com/bingenk)
 
 [Beh Jueen Hao Kelvin](https://github.com/qwer1234abc)
 
-##### **Here is the link to our github-pages:**
-
-[Link for github-pages](https://qwer1234abc.github.io/ID-Assignment-2/)
+#### **Here is the link to our [github-pages](https://qwer1234abc.github.io/ID-Assignment-2/):**
 
 ## Introduction:
 
