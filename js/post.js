@@ -28,11 +28,11 @@ $(document).ready(function () {
               var settings = {
                 async: true,
                 crossDomain: true,
-                url: "https://awdwad-0f4c.restdb.io/rest/shop",
+                url: "https://shops-3ddf.restdb.io/rest/shop",
                 method: "POST",
                 headers: {
                   "content-type": "application/json",
-                  "x-apikey": "63e4faeb478852088da67f45",
+                  "x-apikey": "63e5bc3a478852088da67fbe",
                   "cache-control": "no-cache",
                 },
                 processData: false,
@@ -51,11 +51,11 @@ $(document).ready(function () {
             var settings = {
               async: true,
               crossDomain: true,
-              url: "https://awdwad-0f4c.restdb.io/rest/shop",
+              url: "https://shops-3ddf.restdb.io/rest/shop",
               method: "POST",
               headers: {
                 "content-type": "application/json",
-                "x-apikey": "63e4faeb478852088da67f45",
+                "x-apikey": "63e5bc3a478852088da67fbe",
                 "cache-control": "no-cache",
               },
               processData: false,
