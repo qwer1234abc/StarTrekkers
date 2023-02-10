@@ -10,7 +10,7 @@
 
 [Link for github-pages](https://qwer1234abc.github.io/ID-Assignment-2/)
 
-### Introduction:
+## Introduction:
 
 Welcome to Star Trekkers, an ultimate destination and platform for fans that are interested and fascinated about sci-fi which is very much related to our webpage theme. Our webpage offers a wide range of features that cater to the needs of every Star Trek fan out there. With three exciting games, players can experience from adventurous 'Stars Collector' game which requires to collect as many stars as possible to earn points. Followed by a game called 'Brain Busters' where players can experience the thrill of a challenging, yet entertaining quiz game that tests your patience and strategic thinking. Last but not least, a game of 'Hangman' which is a word guessing game where players attempt to guess a word by guessing letters one at a time in order to earn points.
 
