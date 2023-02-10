@@ -6,7 +6,7 @@
 
 [Beh Jueen Hao Kelvin](https://github.com/qwer1234abc)
 
-#### **Here is the link to our [github-pages](https://qwer1234abc.github.io/ID-Assignment-2/):**
+#### **Here is the link to our [github-pages](https://qwer1234abc.github.io/ID-Assignment-2/).**
 
 ## Introduction:
 
@@ -28,7 +28,7 @@ Then, we start creating a wireframe for our webpage that showcases the layout of
 
 ##### **Here is the wireframe for our project:**
 
-[Link for wireframe](https://xd.adobe.com/view/7a432638-81c2-4eba-8f9d-4f1cca3d2e4c-2f10/)
+[Link for wireframe](https://xd.adobe.com/view/1256ded4-2e26-49f5-be5e-38e0164ce32b-4705/)
 
 ## Features :video_game:
 
