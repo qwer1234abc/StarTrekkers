@@ -158,6 +158,10 @@ ii. Press the buy button if have sufficient points for buying particular items a
 
 ii. After purchasing the selected items and with alert message of showing items being sent to mailbox, users points wull be deducted base on the purchased amount.
 
+**1. RESTDB request timeout:**
+
+i. When too many request are used, RESTDB will eventually timeout and require waiting of at least half a day. :exclamation:
+
 The project is fully responsive in all sizes and across different browsers after testing it with [Google Chrome](https://www.google.com/) & [Microsoft Edge](https://www.microsoft.com/en-us/edge?exp=e511&form=MA13FJ). And the overall appearance of the webpage looks very much the same on both laptop and on mobile screen, in fact it may be a little smaller on mobile view.
 
 Throughout the way of this project, we've faced different bugs and challenging problems that requires us to fix. One of interesting bugs or problems we've discovered during our testing is that our background star animations tend to goes off without looping continuonsly. But, we've found out which sections that causes this issue and had successfully solved it. Apart from this, we also encountered that after switching the theme from dark mode to light mode the color of the mode toggle button doesn't change along. However, after using local storage to set the selected theme and to get the previous selected theme by getting item we fixed the issue. Additionally,
