@@ -149,6 +149,12 @@ $(document).ready(function () {
           screen[_x].addEventListener("click", setScreenAndZoom);
         })(x);
       }
+      notClickableElements.forEach((element) => {
+        element.style.pointerEvents = "none";
+      });
+      clickableElement.forEach((element) => {
+        element.style.pointerEvents = "fill";
+      });
       SignupForm.style.display = "none";
       loginForm.style.display = "none";
       oriPos();
